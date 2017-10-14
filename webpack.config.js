@@ -1,5 +1,5 @@
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
 	entry: './src/index.js',
@@ -40,11 +40,17 @@ module.exports = {
 	    	}
 		]
 	},
-	plugins: [new HtmlWebpackPlugin({
-		minify: {
-			collapseWhitespace: true
-		},
-		template: 'index.template.ejs',
-		inject: 'body'
-	})]
+	plugins: [
+		new HtmlWebpackPlugin({
+			minify: {
+				collapseWhitespace: true
+			},
+			template: 'index.template.ejs',
+			inject: 'body'
+		}),
+		new UglifyJSPlugin({
+			test: /\.js$/,
+			sourceMap: true
+		})
+	]
 };
