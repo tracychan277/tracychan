@@ -30,7 +30,7 @@ module.exports = {
 	    	{
 		    	test: /\.scss$/,
 		    	include: __dirname + '/src/styles',
-		    	loader: 'style-loader!css-loader!sass-loader'
+		    	loader: 'style-loader!css-loader!postcss-loader!sass-loader'
 	    	}
 		]
   	}
