@@ -1,11 +1,11 @@
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: './src/index.js',
 	output: {
     	filename: 'bundle.js',
-		path: __dirname + '/public/assets',
-		publicPath: 'assets'
+		path: __dirname + '/public/'
 	},
 	devServer: {
 		inline: true,
@@ -38,5 +38,12 @@ module.exports = {
 		    	loader: 'style-loader!css-loader!postcss-loader!sass-loader'
 	    	}
 		]
-  	}
+	},
+	plugins: [new HtmlWebpackPlugin({
+		minify: {
+			collapseWhitespace: true
+		},
+		template: 'index.template.ejs',
+		inject: 'body'
+	})]
 };
