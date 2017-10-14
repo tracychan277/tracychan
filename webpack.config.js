@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 module.exports = {
 	entry: './src/index.js',
 	output: {
@@ -14,6 +16,7 @@ module.exports = {
 	    loaders: [
 	    	{
 	        	test: /\.json$/,
+	        	include: __dirname + '/src',
 				loader: 'json-loader'
 	    	},
 	    	{
@@ -23,6 +26,11 @@ module.exports = {
 		    	options: {
 			    	presets: ['react', 'env']
 		    	}
+	    	},
+	    	{
+		    	test: /\.scss$/,
+		    	include: __dirname + '/src/styles',
+		    	loader: 'style-loader!css-loader!sass-loader'
 	    	}
 		]
   	}
