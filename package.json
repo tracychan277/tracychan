@@ -3,12 +3,6 @@
   "version": "1.0.0",
   "description": "My personal website",
   "main": "index.js",
-  "babel": {
-    "presets": [
-      "react",
-      "env"
-    ]
-  },
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack"
