@@ -3,7 +3,7 @@ var webpack = require('webpack');
 module.exports = {
 	entry: './src/index.js',
 	output: {
-    	filename: 'index.js',
+    	filename: 'bundle.js',
 		path: __dirname + '/public/assets',
 		publicPath: 'assets'
 	},
@@ -26,6 +26,11 @@ module.exports = {
 		    	options: {
 			    	presets: ['react', 'env']
 		    	}
+	    	},
+	    	{
+		    	test: /\.js$/,
+		    	include: __dirname + '/src',
+		    	loader: 'eslint-loader'
 	    	},
 	    	{
 		    	test: /\.scss$/,
