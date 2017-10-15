@@ -1,10 +1,12 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
 	entry: './src/index.js',
+	devtool: 'source-map',
 	output: {
-    	filename: 'bundle.js',
+    	filename: 'bundle.min.js',
 		path: __dirname + '/public/'
 	},
 	devServer: {
