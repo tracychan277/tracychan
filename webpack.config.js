@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
+const PROD = JSON.parse(process.env.PROD_ENV || '0');
 
 module.exports = {
 	entry: './src/index.js',
@@ -42,7 +43,7 @@ module.exports = {
 	    	}
 		]
 	},
-	plugins: [
+	plugins: PROD ? [
 		new HtmlWebpackPlugin({
 			minify: {
 				collapseWhitespace: true
@@ -50,9 +51,6 @@ module.exports = {
 			template: 'index.template.ejs',
 			inject: 'body'
 		}),
-		new UglifyJSPlugin({
-			test: /\.js$/,
-			sourceMap: true
-		})
-	]
+		new webpack.optimize.UglifyJsPlugin({minimize: true})
+	] : []
 };
