@@ -16,7 +16,7 @@ module.exports = {
 		watchContentBase: true,
 		port: 3000,
 		hot: true,
-		quiet: true,
+		stats: 'errors-only',
 		watchOptions: {
 			ignored: /node_modules/
 		}
