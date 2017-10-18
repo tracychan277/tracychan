@@ -24,9 +24,14 @@ module.exports = {
 	module: {
 	    loaders: [
 			{
+				enforce: 'pre',
 		    	test: /\.js$/,
 		    	include: __dirname + '/src',
-		    	loader: 'eslint-loader'
+		    	loader: 'eslint-loader',
+		    	options: {
+			    	failOnWarning: false,
+			    	failOnError: true
+		    	}
 	    	},
 	    	{
 		    	test: /\.js$/,
