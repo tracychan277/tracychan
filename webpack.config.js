@@ -13,8 +13,13 @@ module.exports = {
 	devServer: {
 		inline: true,
 		contentBase: './public/',
+		watchContentBase: true,
 		port: 3000,
-		hot: true
+		hot: true,
+		quiet: true,
+		watchOptions: {
+			ignored: /node_modules/
+		}
 	},
 	module: {
 	    loaders: [
