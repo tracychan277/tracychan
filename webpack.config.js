@@ -58,5 +58,5 @@ module.exports = {
 			inject: 'body'
 		}),
 		new webpack.optimize.UglifyJsPlugin({minimize: true})
-	] : []
+	] : [new webpack.HotModuleReplacementPlugin()]
 };
