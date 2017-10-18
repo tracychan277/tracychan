@@ -17,10 +17,10 @@ module.exports = {
 	},
 	module: {
 	    loaders: [
-	    	{
-	        	test: /\.json$/,
-	        	include: __dirname + '/src',
-				loader: 'json-loader'
+			{
+		    	test: /\.js$/,
+		    	include: __dirname + '/src',
+		    	loader: 'eslint-loader'
 	    	},
 	    	{
 		    	test: /\.js$/,
@@ -31,10 +31,10 @@ module.exports = {
 			    	plugins: ['transform-class-properties', 'syntax-object-rest-spread']
 		    	}
 	    	},
-	    	{
-		    	test: /\.js$/,
-		    	include: __dirname + '/src',
-		    	loader: 'eslint-loader'
+			{
+	        	test: /\.json$/,
+	        	include: __dirname + '/src',
+				loader: 'json-loader'
 	    	},
 	    	{
 		    	test: /\.scss$/,
