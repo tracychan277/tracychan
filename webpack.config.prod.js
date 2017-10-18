@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const PROD = JSON.parse(process.env.NODE_ENV || '0');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 	entry: './src/index.js',
@@ -9,17 +8,6 @@ module.exports = {
 	output: {
     	filename: 'bundle.min.js',
 		path: __dirname + '/public/'
-	},
-	devServer: {
-		inline: true,
-		contentBase: './public/',
-		watchContentBase: true,
-		port: 3000,
-		hot: true,
-		stats: 'errors-only',
-		watchOptions: {
-			ignored: /node_modules/
-		}
 	},
 	module: {
 	    loaders: [
@@ -50,11 +38,16 @@ module.exports = {
 	    	{
 		    	test: /\.scss$/,
 		    	include: __dirname + '/src/styles',
-		    	loader: 'style-loader!css-loader!postcss-loader!sass-loader'
+		    	loader: ExtractTextPlugin.extract({
+			    	fallback: 'style-loader',
+			    	use: 'css-loader!postcss-loader!sass-loader'
+		    	})
 	    	}
-		]
+		],
 	},
-	plugins: PROD ? [
+	plugins:
+	[
+		new webpack.EnvironmentPlugin(['NODE_ENV']),
 		new HtmlWebpackPlugin({
 			minify: {
 				collapseWhitespace: true
@@ -62,6 +55,7 @@ module.exports = {
 			template: 'index.template.ejs',
 			inject: 'body'
 		}),
+		new ExtractTextPlugin('styles.css'),
 		new webpack.optimize.UglifyJsPlugin({minimize: true})
-	] : [new webpack.HotModuleReplacementPlugin()]
+	]
 };
