@@ -8,6 +8,7 @@ module.exports = {
 		path: __dirname + '/public/'
 	},
 	devServer: {
+		clientLogLevel: 'none',
 		inline: true,
 		contentBase: './public/',
 		watchContentBase: true,
