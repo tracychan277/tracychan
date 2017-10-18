@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const PROD = JSON.parse(process.env.PROD_ENV || '0');
+const PROD = JSON.parse(process.env.NODE_ENV || '0');
 
 module.exports = {
 	entry: './src/index.js',
