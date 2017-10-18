@@ -40,7 +40,26 @@ module.exports = {
 		    	include: __dirname + '/src/styles',
 		    	loader: ExtractTextPlugin.extract({
 			    	fallback: 'style-loader',
-			    	use: 'css-loader!postcss-loader!sass-loader'
+			    	use: [
+				    	{
+					    	loader: 'css-loader',
+					    	options: {
+						    	minimize: true,
+						    	sourceMap: true
+					    	}
+				    	},
+				    	{
+					    	loader: 'postcss-loader',
+					    	options: {
+						    	plugins: () => [
+							    	require('autoprefixer')
+						    	]
+					    	}
+				    	},
+				    	{
+					    	loader: 'sass-loader'
+				    	}
+			    	]
 		    	})
 	    	}
 		],
