@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Site from './pages/Site';
@@ -12,10 +12,10 @@ const Main = () => (
 		<div>
 			<nav>
 				<ul>
-					<li><Link to="/about-me">About Me</Link></li>
-					<li><Link to="/this-site">This Site</Link></li>
-					<li><Link to="/my-work">My Work</Link></li>
-					<li><Link to="/contact">Contact</Link></li>
+					<li><NavLink to="/about-me">About Me</NavLink></li>
+					<li><NavLink to="/this-site">This Site</NavLink></li>
+					<li><NavLink to="/my-work">My Work</NavLink></li>
+					<li><NavLink to="/contact">Contact</NavLink></li>
 				</ul>
 			</nav>
 			<main>
