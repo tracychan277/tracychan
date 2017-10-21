@@ -1,14 +1,16 @@
 // Colours
-$purple-main: $purple;
-$purple-light: lighten($purple, 30%);
+$purple-main: #260da7;
+$purple-light: lighten($purple-main, 50%);
 $grey-light: $gray-600;
 
 // Body
 $body-background-color: $purple-light;
+$font-family-serif: 'Lora', 'Georgia', serif;
 
 // Header
 $header-heading-color: $purple-main;
 $header-heading-font-size: 5em;
+$header-heading-font: $font-family-serif;
 
 // Main content
 $main-background-color: $white;

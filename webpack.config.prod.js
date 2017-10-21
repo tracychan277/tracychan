@@ -56,12 +56,18 @@ module.exports = {
 						    	]
 					    	}
 				    	},
-				    	{
-					    	loader: 'sass-loader'
-				    	}
+				    	'sass-loader'
 			    	]
 		    	})
-	    	}
+	    	},
+	    	{
+		    	test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+		    	include: __dirname + 'src/styles/fonts',
+		    	loader: 'url-loader',
+		    	options: {
+			    	limit: 100000
+		    	}
+	    	},
 		],
 	},
 	plugins:

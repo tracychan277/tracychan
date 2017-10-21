@@ -48,14 +48,9 @@ module.exports = {
 	    	{
 		    	test: /\.scss$/,
 		    	include: __dirname + '/src/styles',
-		    	
 		    	loader: [
-			    	{
-				    	loader: 'style-loader'
-			    	},
-			    	{
-				    	loader: 'css-loader'
-			    	},
+			    	'style-loader',
+			    	'css-loader',
 			    	{
 				    	loader: 'postcss-loader',
 				    	options: {
@@ -64,11 +59,16 @@ module.exports = {
 							]
 				    	}
 			    	},
-			    	{
-				    	loader: 'sass-loader'
-			    	}
+			    	'sass-loader'
 		    	]
-	    	}
+	    	},
+	    	{
+		    	test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+		    	loader: 'url-loader',
+		    	options: {
+			    	limit: 100000
+		    	}
+	    	},
 		],
 	},
 	plugins: [
