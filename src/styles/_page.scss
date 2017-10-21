@@ -38,7 +38,7 @@ nav {
 	
 	ul {
 		margin-bottom: $container-margin;
-		padding-left: 0;	
+		padding-left: 0;
 	}
 	
 	li {
@@ -53,6 +53,7 @@ nav {
 		font-family: $nav-link-font-family;
 		font-size: 1.5em;
 		text-transform: lowercase;
+		text-shadow: $nav-text-shadow;
 		
 		@include media-breakpoint-up(sm) {
 			font-size: 2em;
