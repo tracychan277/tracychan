@@ -1,7 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
+import {BrowserRouter as Router} from 'react-router-dom';
 
-export default class Main extends Component {
-	render() {
-		return <main>Main</main>;
-	}
-}
+const Main = () => (
+	<Router>
+		<main>Main</main>
+	</Router>
+);
+
+export default Main;
