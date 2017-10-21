@@ -1,7 +1,7 @@
-
+import React from 'react';
 
 const Site = () => (
-	'Site'
+	<h1>Site</h1>
 );
 
 export default Site;
