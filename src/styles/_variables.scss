@@ -8,11 +8,16 @@ $body-background-color: $purple-light;
 $font-family-heading: 'Caveat Brush', 'Georgia', serif;
 $font-family-sans-serif: 'Roboto', 'Helvetica', sans-serif;
 $container-padding: $grid-gutter-width / 2;
+$container-margin: 5px;
 
 // Header
 $header-heading-color: $purple-main;
 $header-heading-font: $font-family-heading;
 $header-heading-letter-spacing: 5px;
+
+// Navigation
+$nav-link-color: $white;
+$nav-link-font-family: $font-family-heading;
 
 // Main content
 $main-background-color: $white;
