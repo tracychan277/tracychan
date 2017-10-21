@@ -1,10 +1,17 @@
 import React, {Component} from 'react';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
 
 class App extends Component {
-	hello = 'Hello';
-	
 	render() {
-		return <h1>{this.hello}</h1>;
+		return (
+			<div className="container">
+				<Header/>
+				<Main/>
+				<Footer/>
+			</div>
+		);
 	}
 }
 

@@ -1,0 +1,22 @@
+body {
+	background: $body-background-color;
+}
+
+header {
+	.heading {
+		width: 100%;
+		color: $header-heading-color;
+		font-size: $header-heading-font-size;
+		text-align: center;
+		text-transform: lowercase;
+	}
+}
+
+main {
+	background-color: $main-background-color;
+}
+
+footer {
+	color: $footer-text-color;
+	text-align: center;
+}

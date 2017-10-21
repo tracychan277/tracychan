@@ -1,0 +1,17 @@
+// Colours
+$purple-main: $purple;
+$purple-light: lighten($purple, 30%);
+$grey-light: $gray-600;
+
+// Body
+$body-background-color: $purple-light;
+
+// Header
+$header-heading-color: $purple-main;
+$header-heading-font-size: 5em;
+
+// Main content
+$main-background-color: $white;
+
+// Footer
+$footer-text-color: $grey-light;
