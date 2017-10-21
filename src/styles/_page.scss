@@ -61,6 +61,7 @@ nav {
 		
 		&.active {
 			color: $nav-link-hover-color;
+			text-shadow: $nav-active-text-shadow;
 		}
 		
 		&:hover {
