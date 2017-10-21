@@ -5,27 +5,25 @@ body {
 
 header {
 	.heading {
-		margin: -10px 0;
+		margin: -20px 0;
 		width: 100%;
 		color: $header-heading-color;
-		font-size: 3em;
+		font-size: 4em;
 		font-family: $header-heading-font;
 		text-align: center;
 		text-transform: lowercase;
 		letter-spacing: $header-heading-letter-spacing;
-		font-weight: bold;
-		font-style: italic;
 		
 		@include media-breakpoint-up(sm) {
-			font-size: 4em;
-		}
-		
-		@include media-breakpoint-up(md) {
 			font-size: 5em;
 		}
 		
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			font-size: 6em;
+		}
+		
+		@include media-breakpoint-up(lg) {
+			font-size: 7em;
 		}
 	}
 }
