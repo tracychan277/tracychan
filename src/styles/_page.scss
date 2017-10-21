@@ -10,6 +10,9 @@ header {
 		font-family: $header-heading-font;
 		text-align: center;
 		text-transform: lowercase;
+		letter-spacing: $header-heading-letter-spacing;
+		font-weight: bold;
+		font-style: italic;
 	}
 }
 
