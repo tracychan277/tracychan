@@ -2,7 +2,9 @@ import React from 'react';
 
 const Header = () => (
 	<header>
-		<div className="heading">Tracy Chan</div>
+		<a href="/" title="Tracy Chan">
+			<span className="heading">Tracy Chan</span>
+		</a>
 	</header>
 );
 

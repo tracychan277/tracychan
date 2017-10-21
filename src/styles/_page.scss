@@ -4,13 +4,14 @@ body {
 }
 
 header {
+	margin: -20px 0;
+	width: 100%;
+	text-align: center;
+	
 	.heading {
-		margin: -20px 0;
-		width: 100%;
 		color: $header-heading-color;
 		font-size: 4em;
 		font-family: $header-heading-font;
-		text-align: center;
 		text-transform: lowercase;
 		letter-spacing: $header-heading-letter-spacing;
 		
@@ -25,6 +26,10 @@ header {
 		@include media-breakpoint-up(lg) {
 			font-size: 7em;
 		}
+	}
+	
+	a:hover {
+		text-decoration: none;
 	}
 }
 
