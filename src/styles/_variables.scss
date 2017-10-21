@@ -1,10 +1,11 @@
 // Colours
 $purple-main: #260da7;
 $purple-light: lighten($purple-main, 50%);
+$purple-lightest: lighten($purple-main, 55%);
 $grey-light: $gray-600;
 
 // Body
-$body-background-color: $purple-light;
+$body-background-color: $purple-lightest;
 $font-family-heading: 'Caveat Brush', 'Georgia', serif;
 $font-family-sans-serif: 'Roboto', 'Helvetica', sans-serif;
 $container-padding: $grid-gutter-width / 2;
@@ -17,6 +18,7 @@ $header-heading-letter-spacing: 5px;
 
 // Navigation
 $nav-link-color: $white;
+$nav-link-hover-color: $purple-light;
 $nav-link-font-family: $font-family-heading;
 
 // Main content

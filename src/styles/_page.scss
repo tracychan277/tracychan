@@ -58,7 +58,12 @@ nav {
 			font-size: 2em;
 		}
 		
+		&.active {
+			color: $nav-link-hover-color;
+		}
+		
 		&:hover {
+			color: $nav-link-hover-color;
 			text-decoration: none;
 		}
 	}
