@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -17,16 +17,16 @@ const Nav = () => (
     <nav>
         <ul className="nav nav-pills float-right">
             <li className="nav-item">
-				<a className="nav-link active" href="#">Home <span className="sr-only">(current)</span></a>
+				<NavLink to="/">Home</NavLink>
 			</li>
 			<li className="nav-item">
-				<a className="nav-link" href="/about-me">About Me</a>
+				<NavLink to="/about-me">About Me</NavLink>
 			</li>
 			<li className="nav-item">
-				<a className="nav-link" href="/this-site">This Site</a>
+				<NavLink to="/this-site">This Site</NavLink>
 			</li>
 			<li className="nav-item">
-				<a className="nav-link" href="/contact">Contact</a>
+				<NavLink to="/contact">Contact</NavLink>
 			</li>
 		</ul>
     </nav>
