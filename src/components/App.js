@@ -1,55 +1,54 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
-import Site from './pages/Site';
-import Work from './pages/Work';
 import Contact from './pages/Contact';
 import NoRoute from './pages/NoRoute';
 
 const Header = () => (
-	<header>
-		<a href="/" title="Tracy Chan">
-			<span className="heading">Tracy Chan</span>
-		</a>
-	</header>
+    <header className="header clearfix">
+		<Nav/>
+        <h3 className="text-muted">Tracy Chan</h3>
+    </header>
 );
 
-const Main = () => (
+const Nav = () => (
+    <nav>
+        <ul className="nav nav-pills float-right">
+            <li className="nav-item">
+				<a className="nav-link active" href="#">Home <span className="sr-only">(current)</span></a>
+			</li>
+			<li className="nav-item">
+				<a className="nav-link" href="/about-me">About</a>
+			</li>
+			<li className="nav-item">
+				<a className="nav-link" href="/contact">Contact</a>
+			</li>
+		</ul>
+    </nav>
+);
+
+const Footer = () => (
+    <footer className="footer">
+		<p>Copyright &copy; Tracy Chan 2017</p>
+    </footer>
+);
+
+const App = () => (
 	<Router>
-		<div>
-			<nav>
-				<ul>
-					<li><NavLink to="/about-me">About Me</NavLink></li>
-					<li><NavLink to="/this-site">This Site</NavLink></li>
-					<li><NavLink to="/my-work">My Work</NavLink></li>
-					<li><NavLink to="/contact">Contact</NavLink></li>
-				</ul>
-			</nav>
+		<div className="container">
+			<Header/>
 			<main>
 				<Switch>
 					<Route exact path="/" component={Home} />
-					<Route path="/about-me" component={About} />
-					<Route path="/this-site" component={Site} />
-					<Route path="/my-work" component={Work} />
+					<Route path="/about" component={About} />
 					<Route path="/contact" component={Contact} />
 					<Route component={NoRoute}/>
 				</Switch>
 			</main>
+			<Footer/>
 		</div>
 	</Router>
-);
-
-const Footer = () => (
-	<footer>Copyright &copy; Tracy Chan 2017</footer>
-);
-
-const App = () => (
-	<div className="container">
-		<Header/>
-		<Main/>
-		<Footer/>
-	</div>
 );
 
 export default App;

@@ -1,84 +1,19 @@
 body {
-	background: $body-background-color;
-	font-family: $font-family-sans-serif;
+	padding: $container-padding 0;
 }
 
 header {
-	margin: -20px 0;
-	width: 100%;
-	text-align: center;
-	
-	.heading {
-		color: $header-heading-color;
-		font-size: 4em;
-		font-family: $header-heading-font;
-		text-transform: lowercase;
-		letter-spacing: $header-heading-letter-spacing;
-		
-		@include media-breakpoint-up(sm) {
-			font-size: 5em;
-		}
-		
-		@include media-breakpoint-up(md) {
-			font-size: 6em;
-		}
-		
-		@include media-breakpoint-up(lg) {
-			font-size: 7em;
-		}
-	}
-	
-	a:hover {
-		text-decoration: none;
-	}
+	margin-bottom: $container-margin;
+	border-bottom: $divider-border;
+	padding-bottom: 1em;
 }
 
-nav {
+.jumbotron {
 	text-align: center;
-	
-	ul {
-		margin-bottom: $container-margin;
-		padding-left: 0;
-	}
-	
-	li {
-		display: inline-block;
-		margin: -15px 0;
-		padding: 0 $container-padding;
-		list-style: none;
-	}
-
-	a {
-		color: $nav-link-color;
-		font-family: $nav-link-font-family;
-		text-transform: lowercase;
-		text-shadow: $nav-text-shadow;
-		
-		@include media-breakpoint-up(md) {
-			font-size: 1.5em;
-		}
-		
-		&.active {
-			color: $nav-link-hover-color;
-			text-shadow: $nav-active-text-shadow;
-		}
-		
-		&:hover {
-			color: $nav-link-hover-color;
-			text-decoration: none;
-			text-shadow: $nav-active-text-shadow;
-		}
-	}
-}
-
-main {
-	min-height: 70vh;
-	background-color: $main-background-color;
-	padding: $container-padding;
 }
 
 footer {
-	padding: $container-padding;
-	color: $footer-text-color;
-	text-align: center;
+	border-top: $divider-border;
+	padding-top: $container-padding;
+	color: #777;
 }

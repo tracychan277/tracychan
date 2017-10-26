@@ -1,32 +1,4 @@
-// Colours
-$purple-main: #260da7;
-$purple-light: lighten($purple-main, 40%);
-$purple-lighter: lighten($purple-main, 50%);
-$purple-lightest: lighten($purple-main, 60%);
-$grey-light: $gray-600;
-
 // Body
-$body-background-color: $purple-lightest;
-$font-family-heading: 'Caveat Brush', 'Georgia', serif;
-$font-family-sans-serif: 'Roboto', 'Helvetica', sans-serif;
-$container-padding: $grid-gutter-width / 2;
-$container-margin: 5px;
-
-// Header
-$header-heading-color: $purple-main;
-$header-heading-font: $font-family-heading;
-$header-heading-letter-spacing: 5px;
-
-// Navigation
-$nav-link-color: $white;
-$nav-link-hover-color: $purple-lighter;
-$nav-link-font-family: $font-family-sans-serif;
-$nav-text-shadow: 2px 2px 10px $purple-main;
-$nav-active-text-shadow: 2px 2px 10px $white;
-
-// Main content
-$main-background-color: $white;
-$main-heading-color: $purple-main;
-
-// Footer
-$footer-text-color: $grey-light;
+$container-padding: 1.5rem;
+$container-margin: 2rem;
+$divider-border: 0.05rem #e5e5e5 solid;
