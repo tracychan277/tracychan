@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Site from './pages/Site';
 import NoRoute from './pages/NoRoute';
 
 const Header = () => (
@@ -20,6 +21,9 @@ const Nav = () => (
 			</li>
 			<li className="nav-item">
 				<a className="nav-link" href="/about-me">About Me</a>
+			</li>
+			<li className="nav-item">
+				<a className="nav-link" href="/this-site">This Site</a>
 			</li>
 			<li className="nav-item">
 				<a className="nav-link" href="/contact">Contact</a>
@@ -42,6 +46,7 @@ const App = () => (
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Route path="/about-me" component={About} />
+					<Route path="/this-site" component={Site} />
 					<Route path="/contact" component={Contact} />
 					<Route component={NoRoute}/>
 				</Switch>
