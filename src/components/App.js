@@ -7,7 +7,7 @@ import Site from './pages/Site';
 import NoRoute from './pages/NoRoute';
 
 const Header = () => (
-    <header className="header clearfix">
+    <header className="clearfix">
 		<Nav/>
         <h3 className="text-muted">Tracy Chan</h3>
     </header>
@@ -17,23 +17,23 @@ const Nav = () => (
     <nav>
         <ul className="nav nav-pills float-right">
             <li className="nav-item">
-				<NavLink to="/">Home</NavLink>
+				<NavLink className="nav-link" to="/">Home</NavLink>
 			</li>
 			<li className="nav-item">
-				<NavLink to="/about-me">About Me</NavLink>
+				<NavLink className="nav-link" to="/about-me">About Me</NavLink>
 			</li>
 			<li className="nav-item">
-				<NavLink to="/this-site">This Site</NavLink>
+				<NavLink className="nav-link" to="/this-site">This Site</NavLink>
 			</li>
 			<li className="nav-item">
-				<NavLink to="/contact">Contact</NavLink>
+				<NavLink className="nav-link" to="/contact">Contact</NavLink>
 			</li>
 		</ul>
     </nav>
 );
 
 const Footer = () => (
-    <footer className="footer">
+    <footer>
 		<p>Copyright &copy; Tracy Chan 2017</p>
     </footer>
 );
