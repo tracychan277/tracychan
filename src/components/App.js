@@ -17,7 +17,7 @@ const Nav = () => (
     <nav>
         <ul className="nav nav-pills float-right">
             <li className="nav-item">
-				<NavLink className="nav-link" to="/">Home</NavLink>
+				<NavLink exact className="nav-link" to="/">Home</NavLink>
 			</li>
 			<li className="nav-item">
 				<NavLink className="nav-link" to="/about-me">About Me</NavLink>
