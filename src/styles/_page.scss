@@ -3,9 +3,14 @@ body {
 }
 
 header {
+	@include clearfix();
 	margin-bottom: $container-margin;
 	border-bottom: $divider-border;
 	padding-bottom: 1em;
+	
+	h3 {
+		color: $text-muted;
+	}
 }
 
 .jumbotron {
@@ -15,5 +20,13 @@ header {
 footer {
 	border-top: $divider-border;
 	padding-top: $container-padding;
-	color: #777;
+	color: $text-muted;
+}
+
+.column {
+	padding: 0 $container-padding;
+	
+	@include media-breakpoint-up(sm) {
+		@include make-col(6);
+	}
 }

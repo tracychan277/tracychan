@@ -8,8 +8,8 @@ const Home = () => (
 			<p><a className="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
 		</div>
 	
-		<div className="row marketing">
-			<div className="col-lg-6">
+		<div className="row">
+			<div className="column">
 				<h4>Subheading</h4>
 				<p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 	
@@ -20,7 +20,7 @@ const Home = () => (
 				<p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
 			</div>
 	
-			<div className="col-lg-6">
+			<div className="column">
 				<h4>Subheading</h4>
 				<p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 	

@@ -1,4 +1,7 @@
+// Colours
+$grey-light: #e5e5e5;
+
 // Body
 $container-padding: 1.5rem;
 $container-margin: 2rem;
-$divider-border: 0.05rem #e5e5e5 solid;
+$divider-border: 0.05rem $grey-light solid;

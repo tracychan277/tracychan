@@ -7,9 +7,9 @@ import Site from './pages/Site';
 import NoRoute from './pages/NoRoute';
 
 const Header = () => (
-    <header className="clearfix">
+    <header>
 		<Nav/>
-        <h3 className="text-muted">Tracy Chan</h3>
+        <h3>Tracy Chan</h3>
     </header>
 );
 
