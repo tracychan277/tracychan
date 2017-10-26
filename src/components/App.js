@@ -19,7 +19,7 @@ const Nav = () => (
 				<a className="nav-link active" href="#">Home <span className="sr-only">(current)</span></a>
 			</li>
 			<li className="nav-item">
-				<a className="nav-link" href="/about-me">About</a>
+				<a className="nav-link" href="/about-me">About Me</a>
 			</li>
 			<li className="nav-item">
 				<a className="nav-link" href="/contact">Contact</a>
@@ -41,7 +41,7 @@ const App = () => (
 			<main>
 				<Switch>
 					<Route exact path="/" component={Home} />
-					<Route path="/about" component={About} />
+					<Route path="/about-me" component={About} />
 					<Route path="/contact" component={Contact} />
 					<Route component={NoRoute}/>
 				</Switch>
