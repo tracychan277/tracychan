@@ -18,8 +18,12 @@ nav {
 	@extend .navbar-expand-md;
 	@extend .navbar-light;
 
-	a {
+	> a {
 		@extend .navbar-brand;
+
+		h3 {
+			font-size: 1.5em;
+		}
 	}
 
 	button {
