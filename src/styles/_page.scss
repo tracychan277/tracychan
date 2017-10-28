@@ -47,6 +47,10 @@ nav {
 				@include media-breakpoint-up(sm) {
 					margin-right: $nav-link-margin;
 				}
+
+				&.active {
+					color: $nav-link-active-color;
+				}
 			}
 		}
 	}
