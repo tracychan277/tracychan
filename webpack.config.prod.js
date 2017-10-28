@@ -6,69 +6,69 @@ module.exports = {
 	entry: './src/index.js',
 	devtool: 'source-map',
 	output: {
-    	filename: 'bundle.min.js',
+		filename: 'bundle.min.js',
 		path: __dirname + '/public/'
 	},
 	module: {
-	    loaders: [
+		 loaders: [
 			{
 				enforce: 'pre',
-		    	test: /\.js$/,
-		    	include: __dirname + '/src',
-		    	loader: 'eslint-loader',
-		    	options: {
-			    	failOnWarning: false,
-			    	failOnError: true
-		    	}
-	    	},
-	    	{
-		    	test: /\.js$/,
-		    	include: __dirname + '/src',
-		    	loader: 'babel-loader',
-		    	options: {
-			    	presets: ['react', 'env'],
-			    	plugins: ['transform-class-properties', 'syntax-object-rest-spread']
-		    	}
-	    	},
+				test: /\.js$/,
+				include: __dirname + '/src',
+				loader: 'eslint-loader',
+				options: {
+					failOnWarning: false,
+					failOnError: true
+				}
+			},
 			{
-	        	test: /\.json$/,
-	        	include: __dirname + '/src',
+				test: /\.js$/,
+				include: __dirname + '/src',
+				loader: 'babel-loader',
+				options: {
+					presets: ['react', 'env'],
+					plugins: ['transform-class-properties', 'syntax-object-rest-spread']
+				}
+			},
+			{
+				test: /\.json$/,
+				include: __dirname + '/src',
 				loader: 'json-loader'
-	    	},
-	    	{
-		    	test: /\.scss$/,
-		    	include: __dirname + '/src/styles',
-		    	loader: ExtractTextPlugin.extract({
-			    	fallback: 'style-loader',
-			    	use: [
-				    	{
-					    	loader: 'css-loader',
-					    	options: {
-						    	minimize: true,
-						    	sourceMap: true
-					    	}
-				    	},
-				    	{
-					    	loader: 'postcss-loader',
-					    	options: {
-						    	plugins: () => [
-							    	require('autoprefixer')
-						    	]
-					    	}
-				    	},
-				    	'sass-loader'
-			    	]
-		    	})
-	    	},
-	    	{
-		    	test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-		    	include: __dirname + 'src/styles/fonts',
-		    	loader: 'url-loader',
-		    	options: {
-			    	limit: 100000
-		    	}
-	    	},
-		],
+			},
+			{
+				test: /\.scss$/,
+				include: __dirname + '/src/styles',
+				loader: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: [
+						{
+							loader: 'css-loader',
+							options: {
+								minimize: true,
+								sourceMap: true
+							}
+						},
+						{
+							loader: 'postcss-loader',
+							options: {
+								plugins: () => [
+									require('autoprefixer')
+								]
+							}
+						},
+						'sass-loader'
+					]
+				})
+			},
+			{
+				test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+				include: __dirname + 'src/styles/fonts',
+				loader: 'url-loader',
+				options: {
+					limit: 100000
+				}
+			}
+		]
 	},
 	plugins:
 	[

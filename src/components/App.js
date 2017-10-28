@@ -7,41 +7,33 @@ import Site from './pages/Site';
 import NoRoute from './pages/NoRoute';
 
 const Header = () => (
-    <header>
+	<header>
 		<Nav/>
-    </header>
+	</header>
 );
 
 const Nav = () => (
-    <nav className="navbar navbar-expand-md navbar-light">
+	<nav>
 		<a className="navbar-brand" href="/"><h3>Tracy Chan</h3></a>
-		<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span className="navbar-toggler-icon"></span>
 		</button>
 		
-		<div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-			<ul className="nav nav-pills">
-				<li className="nav-item">
-					<NavLink exact className="nav-link" to="/">Home</NavLink>
-				</li>
-				<li className="nav-item">
-					<NavLink className="nav-link" to="/about-me">About Me</NavLink>
-				</li>
-				<li className="nav-item">
-					<NavLink className="nav-link" to="/this-site">This Site</NavLink>
-				</li>
-				<li className="nav-item">
-					<NavLink className="nav-link" to="/contact">Contact</NavLink>
-				</li>
+		<div id="navbarSupportedContent">
+			<ul>
+				<li><NavLink exact to="/">Home</NavLink></li>
+				<li><NavLink to="/about-me">About Me</NavLink></li>
+				<li><NavLink to="/this-site">This Site</NavLink></li>
+				<li><NavLink to="/contact">Contact</NavLink></li>
 			</ul>
 		</div>
-    </nav>
+	</nav>
 );
 
 const Footer = () => (
-    <footer>
+	<footer>
 		<p>Copyright &copy; Tracy Chan 2017</p>
-    </footer>
+	</footer>
 );
 
 const App = () => (

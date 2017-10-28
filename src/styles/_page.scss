@@ -7,9 +7,38 @@ header {
 	margin-bottom: $container-margin;
 	border-bottom: $divider-border;
 	padding-bottom: 1em;
-	
+
 	h3 {
 		color: $text-muted;
+	}
+}
+
+nav {
+	@extend .navbar;
+	@extend .navbar-expand-md;
+	@extend .navbar-light;
+
+	button {
+		@extend .navbar-toggler;
+	}
+
+	div {
+		@extend .collapse;
+		@extend .navbar-collapse;
+		@extend .justify-content-end;
+	}
+
+	ul {
+		@extend .navbar-nav;
+		@extend .nav-pills;
+	}
+
+	li {
+		@extend .nav-item;
+
+		a {
+			@extend .nav-link;
+		}
 	}
 }
 
