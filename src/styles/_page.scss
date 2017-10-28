@@ -18,6 +18,10 @@ nav {
 	@extend .navbar-expand-md;
 	@extend .navbar-light;
 
+	a {
+		@extend .navbar-brand;
+	}
+
 	button {
 		@extend .navbar-toggler;
 	}

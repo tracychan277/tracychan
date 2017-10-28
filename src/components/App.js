@@ -14,7 +14,7 @@ const Header = () => (
 
 const Nav = () => (
 	<nav>
-		<a className="navbar-brand" href="/"><h3>Tracy Chan</h3></a>
+		<a href="/"><h3>Tracy Chan</h3></a>
 		<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span className="navbar-toggler-icon"></span>
 		</button>
@@ -40,15 +40,13 @@ const App = () => (
 	<Router>
 		<div className="container">
 			<Header/>
-			<main>
-				<Switch>
-					<Route exact path="/" component={Home} />
-					<Route path="/about-me" component={About} />
-					<Route path="/this-site" component={Site} />
-					<Route path="/contact" component={Contact} />
-					<Route component={NoRoute}/>
-				</Switch>
-			</main>
+			<Switch>
+				<Route exact path="/" component={Home} />
+				<Route path="/about-me" component={About} />
+				<Route path="/this-site" component={Site} />
+				<Route path="/contact" component={Contact} />
+				<Route component={NoRoute}/>
+			</Switch>
 			<Footer/>
 		</div>
 	</Router>

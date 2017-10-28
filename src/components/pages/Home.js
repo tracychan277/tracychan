@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Home = () => (
-	<div>
+	<main>
 		<div className="jumbotron">
 			<h1 className="display-3">Jumbotron heading</h1>
 			<p className="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
@@ -31,7 +31,7 @@ const Home = () => (
 				<p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
 			</div>
 		</div>
-	</div>
+	</main>
 );
 
 export default Home;
