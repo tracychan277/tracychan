@@ -13,6 +13,7 @@ module.exports = {
 		contentBase: './public/',
 		watchContentBase: true,
 		port: 3000,
+		historyApiFallback: true,
 		hot: true,
 		stats: 'errors-only',
 		watchOptions: {
