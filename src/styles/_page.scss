@@ -35,13 +35,19 @@ nav {
 	ul {
 		@extend .navbar-nav;
 		@extend .nav-pills;
-	}
 
-	li {
-		@extend .nav-item;
+		> li {
+			@extend .nav-item;
 
-		a {
-			@extend .nav-link;
+			> a {
+				@extend .nav-link;
+				margin: 0;
+				padding: $nav-link-padding;
+
+				@include media-breakpoint-up(sm) {
+					margin-right: $nav-link-margin;
+				}
+			}
 		}
 	}
 }
