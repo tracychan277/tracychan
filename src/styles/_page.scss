@@ -14,17 +14,16 @@ nav {
 	@extend .navbar-light;
 
 	padding: 0;
+	padding-bottom: $nav-link-padding;
 
 	@include media-breakpoint-up(sm) {
-		padding: 0.5rem 1em;
+		padding: $nav-link-padding $nav-link-margin;
 	}
 
 	> a {
 		@extend .navbar-brand;
-
-		h3 {
-			font-size: 1.5em;
-		}
+		font-size: $header-font-size;
+		font-weight: $header-font-weight;
 	}
 
 	button {
