@@ -6,11 +6,6 @@ header {
 	@include clearfix();
 	margin-bottom: $container-margin;
 	border-bottom: $divider-border;
-	padding-bottom: 1em;
-
-	h3 {
-		color: $text-muted;
-	}
 }
 
 nav {
@@ -22,6 +17,7 @@ nav {
 		@extend .navbar-brand;
 
 		h3 {
+			color: $text-muted;
 			font-size: 1.5em;
 		}
 	}
@@ -61,7 +57,7 @@ nav {
 }
 
 main {
-	min-height: 55vh;
+	min-height: $content-min-height;
 }
 
 .jumbotron {
