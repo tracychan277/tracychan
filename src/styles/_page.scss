@@ -26,7 +26,6 @@ nav {
 	}
 
 	div {
-		@extend .collapse;
 		@extend .navbar-collapse;
 		@extend .justify-content-end;
 	}

@@ -19,7 +19,7 @@ const Nav = () => (
 			<span className="navbar-toggler-icon"></span>
 		</button>
 		
-		<div id="navbarSupportedContent">
+		<div className="collapse" id="navbarSupportedContent">
 			<ul>
 				<li><NavLink exact to="/">Home</NavLink></li>
 				<li><NavLink to="/about-me">About Me</NavLink></li>
