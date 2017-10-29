@@ -1,16 +1,11 @@
+a:hover {
+	text-decoration: none;
+}
+
 .contact-list {
 	padding-left: 0;
 	
 	li {
 		list-style-type: none;
-	}
-
-	svg {
-		width: 1.5em;
-		height: 1.5em;
-	}
-
-	a:hover {
-		text-decoration: none;
 	}
 }
