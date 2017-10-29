@@ -84,8 +84,7 @@ module.exports = {
 				collapseWhitespace: true
 			},
 			template: 'index.template.ejs',
-			inject: 'body',
-			title: 'Tracy Chan | Personal Website'
+			inject: 'body'
 		}),
 		new ExtractTextPlugin('styles.css'),
 		new webpack.optimize.UglifyJsPlugin({minimize: true})
