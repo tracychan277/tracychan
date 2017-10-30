@@ -7,7 +7,7 @@ module.exports = {
 	devtool: 'source-map',
 	output: {
 		filename: 'bundle.min.js',
-		path: __dirname + '/public/'
+		path: __dirname + '/build'
 	},
 	module: {
 		 loaders: [
