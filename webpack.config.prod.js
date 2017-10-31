@@ -48,13 +48,25 @@ module.exports = {
 							options: {
 								plugins: () => [
 									require('autoprefixer')
-								]
+								],
+								sourceMap: true
 							}
 						},
-						'sass-loader'
+						'resolve-url-loader',
+						{
+							loader: 'sass-loader',
+							sourceMap: true
+						}
 					]
 				})
-			}
+			},
+			{
+				test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+				loader: 'url-loader',
+				options: {
+					limit: 100000
+				}
+ 			}
 		]
 	},
 	plugins:
