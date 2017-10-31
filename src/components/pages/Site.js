@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {FaGithub} from 'react-icons/lib/fa';
 import Card from '../Card';
 import DevIcon from '../DevIcon';
@@ -21,16 +21,28 @@ const Jumbotron = () => (
 	</div>
 );
 
-const DevIcons = () => (
-	<ul className="dev-icons">
-		<li><DevIcon name="amazonwebservices-original"/></li>
-		<li><DevIcon name="webpack-plain"/></li>
-		<li><DevIcon name="babel-plain"/></li>
-		<li><DevIcon name="react-original"/></li>
-		<li><DevIcon name="sass-original"/></li>
-		<li><DevIcon name="bootstrap-plain"/></li>
-	</ul>
-);
+class DevIcons extends Component {
+	render() {
+		const iconNames = [
+			'amazonwebservices-original',
+			'webpack-plain',
+			'babel-plain',
+			'react-original',
+			'sass-original',
+			'bootstrap-plain'
+		];
+
+		const mappedIcons = iconNames.map((iconName) => {
+			return <li key={iconName}><DevIcon name={iconName}/></li>
+		});
+
+		return (
+			<ul className="dev-icons">
+				{mappedIcons}
+			</ul>
+		);
+	}
+}
 
 const DevTools = () => (
 	<dl>
