@@ -17,7 +17,7 @@ nav {
 	padding-bottom: $nav-link-padding;
 
 	@include media-breakpoint-up(md) {
-		padding: $nav-link-padding $nav-link-margin;
+		padding: $nav-link-padding 0;
 	}
 
 	> a {
