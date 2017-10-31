@@ -98,8 +98,8 @@ footer {
 	}
 }
 
-.card {
-	&:last-child {
+.card-body {
+	:last-child {
 		margin-bottom: 0;
 	}
 }
