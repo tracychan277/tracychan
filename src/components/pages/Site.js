@@ -4,13 +4,27 @@ import Card from '../Card';
 
 const Site = () => (
 	<main>
-		<h1>This Site</h1>
-		<p>You can view the source code for this site at <a href="https://github.com/tracychan277/tracychan" rel="noopener noreferrer" target="_blank"><FaGithub/> GitHub</a>. This static site is hosted on an AWS S3 bucket and served through CloudFront.</p>
+		<Jumbotron/>
 		<div className="row">
 			<Card heading="Development Tools"><DevTools/></Card>
 			<Card heading="Frontend Libraries"><Frontend/></Card>
 		</div>
 	</main>
+);
+
+const Jumbotron = () => (
+	<div className="jumbotron">
+		<h1>This Site</h1>
+		<DevIcons/>
+		<p>You can view the source code for this site at <a href="https://github.com/tracychan277/tracychan" rel="noopener noreferrer" target="_blank"><FaGithub/> GitHub</a>. This static site is hosted on an AWS S3 bucket and served through CloudFront.</p>
+	</div>
+);
+
+const DevIcons = () => (
+	<ul className="dev-icons">
+		<li><i className="devicon-amazonwebservices-original colored"></i></li>
+		<li><i className="devicon-webpack-plain colored"></i></li>
+	</ul>
 );
 
 const DevTools = () => (
@@ -36,6 +50,8 @@ const Frontend = () => (
 		<dd>A mobile-first responsive frontend library that is dependent on jQuery and Popper.js.</dd>
 		<dt>React Icons</dt>
 		<dd>An interface for importing SVG icons from the most popular icon font libraries into React.</dd>
+		<dt>Devicon</dt>
+		<dd>Icon font for programming languages and development tools.</dd>
 	</dl>
 );
 

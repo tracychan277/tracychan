@@ -1,13 +1,6 @@
-h1, h2 {
-	font-weight: $heading-font-weight;
-}
-
-h1 {
-	font-size: 1.5em;
-}
-
 h2 {
 	font-size: 1em;
+	font-weight: $heading-font-weight;
 	text-transform: uppercase;
 }
 

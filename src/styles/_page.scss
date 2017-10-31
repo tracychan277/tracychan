@@ -65,6 +65,14 @@ main {
 
 .jumbotron {
 	text-align: center;
+
+	h1 {
+		@extend .display-4;
+	}
+
+	p {
+		@extend .lead;
+	}
 }
 
 footer {
