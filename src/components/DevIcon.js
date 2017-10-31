@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const DevIcon = (props) => (
-	<i className={'devicon-' + props.name + ' colored'}></i>
+	<i className={'devicon-' + props.name}></i>
 );
 
 DevIcon.propTypes = {
