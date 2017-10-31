@@ -1,75 +1,74 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {FaGithub} from 'react-icons/lib/fa';
 import Card from '../Card';
 import DevIcon from '../DevIcon';
+import DataList from '../DataList';
 
-const Site = () => (
-	<main>
-		<Jumbotron/>
-		<div className="row">
-			<Card heading="Development Tools"><DevTools/></Card>
-			<Card heading="Frontend Libraries"><Frontend/></Card>
-		</div>
-	</main>
-);
+export default class Site extends Component {
+	iconNames = [
+		'amazonwebservices-original',
+		'webpack-plain',
+		'babel-plain',
+		'react-original',
+		'sass-original',
+		'bootstrap-plain'
+	];
 
-const Jumbotron = () => (
-	<div className="jumbotron">
-		<h1>This Site</h1>
-		<DevIcons/>
-		<p>You can view the source code for this site at <a href="https://github.com/tracychan277/tracychan" rel="noopener noreferrer" target="_blank"><FaGithub/> GitHub</a>. This static site is hosted on an AWS S3 bucket and served through CloudFront.</p>
-	</div>
-);
+	devtoolsList = [
+		['npm', 'Used to manage all JavaScript packages and dependencies.'],
+		['webpack', 'Runs a development server on Express.js and automates building production-ready assets.'],
+		['Babel', 'Used to transpile JSX into regular JavaScript and allow ES6+ syntax to be used in code.'],
+		['ESLint', 'JavaScript linter for detecting code style issues.']
+	];
 
-class DevIcons extends Component {
+	frontendList = [
+		['React', 'Component-based JavaScript library for building reactive user interfaces.'],
+		['React Router', 'Provides client-side routing functionality for single page applications in React.'],
+		['Bootstrap', 'A mobile-first responsive frontend library that is dependent on jQuery and Popper.js.'],
+		['React Icons', 'An interface for importing SVG icons from the most popular icon font libraries into React.'],
+		['Devicon', 'Icon font for programming languages and development tools.']
+	];
+
 	render() {
-		const iconNames = [
-			'amazonwebservices-original',
-			'webpack-plain',
-			'babel-plain',
-			'react-original',
-			'sass-original',
-			'bootstrap-plain'
-		];
-
-		const mappedIcons = iconNames.map((iconName) => {
-			return <li key={iconName}><DevIcon name={iconName}/></li>
-		});
-
 		return (
-			<ul className="dev-icons">
-				{mappedIcons}
-			</ul>
+			<main>
+				<Jumbotron iconNames={this.iconNames}/>
+				<div className="row">
+					<Card heading="Development Tools">
+						<DataList list={this.devtoolsList}/>
+					</Card>
+					<Card heading="Frontend Libraries">
+						<DataList list={this.frontendList}/>
+					</Card>
+				</div>
+			</main>
 		);
 	}
 }
 
-const DevTools = () => (
-	<dl>
-		<dt>npm</dt>
-		<dd>Used to manage all JavaScript packages and dependencies.</dd>
-		<dt>webpack</dt>
-		<dd>Runs a development server on Express.js and automates building production-ready assets.</dd>
-		<dt>Babel</dt>
-		<dd>Used to transpile JSX into regular JavaScript and allow ES6+ syntax to be used in code.</dd>
-		<dt>ESLint</dt>
-		<dd>JavaScript linter for detecting code style issues.</dd>
-	</dl>
+const Jumbotron = (props) => (
+	<div className="jumbotron">
+		<h1>This Site</h1>
+		<DevIcons iconNames={props.iconNames}/>
+		<p>You can view the source code for this site at <a href="https://github.com/tracychan277/tracychan" rel="noopener noreferrer" target="_blank"><FaGithub/> GitHub</a>. This static site is hosted on an AWS S3 bucket and served through CloudFront.</p>
+	</div>
 );
 
-const Frontend = () => (
-	<dl>
-		<dt>React</dt>
-		<dd>Component-based JavaScript library for building reactive user interfaces.</dd>
-		<dt>React Router</dt>
-		<dd>Provides client-side routing functionality for single page applications in React.</dd>
-		<dt>Bootstrap</dt>
-		<dd>A mobile-first responsive frontend library that is dependent on jQuery and Popper.js.</dd>
-		<dt>React Icons</dt>
-		<dd>An interface for importing SVG icons from the most popular icon font libraries into React.</dd>
-		<dt>Devicon</dt>
-		<dd>Icon font for programming languages and development tools.</dd>
-	</dl>
-);
+Jumbotron.propTypes = {
+	iconNames: PropTypes.array
+}
 
-export default Site;
+const DevIcons = (props) => (
+	<ul className="dev-icons">
+		{
+			props.iconNames.map((iconName) => {
+				return <li key={iconName}><DevIcon name={iconName}/></li>
+			})
+		}
+	</ul>
+)
+
+DevIcons.propTypes = {
+	iconNames: PropTypes.array
+}
