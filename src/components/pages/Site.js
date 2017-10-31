@@ -1,6 +1,7 @@
 import React from 'react';
 import {FaGithub} from 'react-icons/lib/fa';
 import Card from '../Card';
+import DevIcon from '../DevIcon';
 
 const Site = () => (
 	<main>
@@ -22,12 +23,12 @@ const Jumbotron = () => (
 
 const DevIcons = () => (
 	<ul className="dev-icons">
-		<li><i className="devicon-amazonwebservices-original colored"></i></li>
-		<li><i className="devicon-webpack-plain colored"></i></li>
-		<li><i className="devicon-babel-plain colored"></i></li>
-		<li><i className="devicon-react-original colored"></i></li>
-		<li><i className="devicon-sass-original colored"></i></li>
-		<li><i className="devicon-bootstrap-plain colored"></i></li>
+		<li><DevIcon name="amazonwebservices-original"/></li>
+		<li><DevIcon name="webpack-plain"/></li>
+		<li><DevIcon name="babel-plain"/></li>
+		<li><DevIcon name="react-original"/></li>
+		<li><DevIcon name="sass-original"/></li>
+		<li><DevIcon name="bootstrap-plain"/></li>
 	</ul>
 );
 
