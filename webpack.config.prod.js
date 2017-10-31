@@ -31,11 +31,6 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.json$/,
-				include: __dirname + '/src',
-				loader: 'json-loader'
-			},
-			{
 				test: /\.scss$/,
 				include: __dirname + '/src/styles',
 				loader: ExtractTextPlugin.extract({
@@ -59,14 +54,6 @@ module.exports = {
 						'sass-loader'
 					]
 				})
-			},
-			{
-				test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-				include: __dirname + 'src/styles/fonts',
-				loader: 'url-loader',
-				options: {
-					limit: 100000
-				}
 			}
 		]
 	},
