@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 const DataList = (props) => (
 	<dl>
 		{
-			props.list.map((description, index) => {
+			Object.keys(props.list).map((title) => {
 				return (
-					<span key={index}>
-					<dt key={description[0]}>{description[0]}</dt>
-					<dd key={description[1]}>{description[1]}</dd>
+					<span key={title}>
+						<dt>{title}</dt>
+						<dd>{props.list[title]}</dd>
 					</span>
 				)
 			})
@@ -17,7 +17,7 @@ const DataList = (props) => (
 );
 
 DataList.propTypes = {
-	list: PropTypes.array
+	list: PropTypes.object
 }
 
 export default DataList;

@@ -15,20 +15,20 @@ export default class Site extends Component {
 		'bootstrap-plain'
 	];
 
-	devtoolsList = [
-		['npm', 'Used to manage all JavaScript packages and dependencies.'],
-		['webpack', 'Runs a development server on Express.js and automates building production-ready assets.'],
-		['Babel', 'Used to transpile JSX into regular JavaScript and allow ES6+ syntax to be used in code.'],
-		['ESLint', 'JavaScript linter for detecting code style issues.']
-	];
+	devtoolsList = {
+		'npm': 'Used to manage all JavaScript packages and dependencies.',
+		'webpack': 'Runs a development server on Express.js and automates building production-ready assets.',
+		'Babel': 'Used to transpile JSX into regular JavaScript and allow ES6+ syntax to be used in code.',
+		'ESLint': 'JavaScript linter for detecting code style issues.'
+	};
 
-	frontendList = [
-		['React', 'Component-based JavaScript library for building reactive user interfaces.'],
-		['React Router', 'Provides client-side routing functionality for single page applications in React.'],
-		['Bootstrap', 'A mobile-first responsive frontend library that is dependent on jQuery and Popper.js.'],
-		['React Icons', 'An interface for importing SVG icons from the most popular icon font libraries into React.'],
-		['Devicon', 'Icon font for programming languages and development tools.']
-	];
+	frontendList = {
+		'React': 'Component-based JavaScript library for building reactive user interfaces.',
+		'React Router': 'Provides client-side routing functionality for single page applications in React.',
+		'Bootstrap': 'A mobile-first responsive frontend library that is dependent on jQuery and Popper.js.',
+		'React Icons': 'An interface for importing SVG icons from the most popular icon font libraries into React.',
+		'Devicon': 'Icon font for programming languages and development tools.'
+	};
 
 	render() {
 		return (
