@@ -30,26 +30,13 @@ i[class^="devicon-"] {
 	height: $devicon-size;
 }
 
-.devicon-amazonwebservices-original {
-	mask-image: url('~devicon-2.2/icons/amazonwebservices/amazonwebservices-original.svg');
-}
+$devicons-list: 'amazonwebservices-original', 'babel-plain', 'bootstrap-plain', 'react-original', 'sass-original', 'webpack-plain';
 
-.devicon-babel-plain {
-	mask-image: url('~devicon-2.2/icons/babel/babel-plain.svg');
-}
+@each $devicon in $devicons-list {
+	$dash-index: str-index($devicon, '-');
+	$directory: str_slice($devicon, 0, ($dash-index) - 1);
 
-.devicon-bootstrap-plain {
-	mask-image: url('~devicon-2.2/icons/bootstrap/bootstrap-plain.svg');
-}
-
-.devicon-react-original {
-	mask-image: url('~devicon-2.2/icons/react/react-original.svg');
-}
-
-.devicon-sass-original {
-	mask-image: url('~devicon-2.2/icons/sass/sass-original.svg');
-}
-
-.devicon-webpack-plain {
-	mask-image: url('~devicon-2.2/icons/webpack/webpack-plain.svg');
+	.devicon-#{$devicon} {
+		mask-image: url('~devicon-2.2/icons/#{$directory}/#{$devicon}.svg');
+	}
 }
