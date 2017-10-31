@@ -30,7 +30,7 @@ const Frontend = () => (
 		<dt>React</dt>
 		<dd>Component-based JavaScript library for building reactive user interfaces.</dd>
 		<dt>React Router</dt>
-		<dd>Provides page routing functionality for single page applications.</dd>
+		<dd>Provides client-size routing functionality for single page applications in React.</dd>
 		<dt>Bootstrap</dt>
 		<dd>A mobile-first responsive frontend library that is dependent on jQuery and Popper.js.</dd>
 		<dt>React Icons</dt>
