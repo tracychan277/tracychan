@@ -1,15 +1,14 @@
-@import '~devicon-2.2/devicon';
-
+// Font awesome icons
 svg {
 	width: $icon-font-size;
 	height: $icon-font-size;
 }
 
+// Development icons list
 .dev-icons {
 	@extend .row;
 	@include clearfix();
 	padding-left: 0;
-	font-size: 4em;
 
 	li {
 		@include make-col(4);
@@ -20,4 +19,37 @@ svg {
 			@include make-col(2);
 		}
 	}
+}
+
+// Devicon icons
+i[class^="devicon-"] {
+	display: block;
+	background-color: $black;
+	margin: 0.5rem auto;
+	width: 4em;
+	height: 4em;
+}
+
+.devicon-amazonwebservices-original {
+	mask-image: url('~devicon-2.2/icons/amazonwebservices/amazonwebservices-original.svg');
+}
+
+.devicon-babel-plain {
+	mask-image: url('~devicon-2.2/icons/babel/babel-plain.svg');
+}
+
+.devicon-bootstrap-plain {
+	mask-image: url('~devicon-2.2/icons/bootstrap/bootstrap-plain.svg');
+}
+
+.devicon-react-original {
+	mask-image: url('~devicon-2.2/icons/react/react-original.svg');
+}
+
+.devicon-sass-original {
+	mask-image: url('~devicon-2.2/icons/sass/sass-original.svg');
+}
+
+.devicon-webpack-plain {
+	mask-image: url('~devicon-2.2/icons/webpack/webpack-plain.svg');
 }
