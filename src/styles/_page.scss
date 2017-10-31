@@ -71,6 +71,14 @@ footer {
 	border-top: $divider-border;
 	padding-top: $container-padding;
 	color: $text-muted;
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: inherit;
+		}
+	}
 }
 
 .column {

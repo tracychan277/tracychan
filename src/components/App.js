@@ -5,6 +5,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Site from './pages/Site';
 import NoRoute from './pages/NoRoute';
+import {FaGithub} from 'react-icons/lib/fa';
 
 const Header = () => (
 	<header>
@@ -32,7 +33,7 @@ const Nav = () => (
 
 const Footer = () => (
 	<footer>
-		<p>Copyright &copy; Tracy Chan 2017</p>
+		<p>&copy; Tracy Chan 2017 <a href="https://github.com/tracychan277/tracychan" title="View source code on Github" target="_blank" rel="noopener noreferrer"><FaGithub/></a></p>
 	</footer>
 );
 
