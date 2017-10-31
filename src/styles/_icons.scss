@@ -4,12 +4,18 @@ svg {
 }
 
 .dev-icons {
+	@extend .row;
 	@include clearfix();
 	padding-left: 0;
 	font-size: 4em;
 
 	li {
+		@include make-col(4);
 		float: left;
 		list-style-type: none;
+
+		@include media-breakpoint-up(md) {
+			@include make-col(2);
+		}
 	}
 }
