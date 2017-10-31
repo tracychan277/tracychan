@@ -24,6 +24,10 @@ const DevIcons = () => (
 	<ul className="dev-icons">
 		<li><i className="devicon-amazonwebservices-original colored"></i></li>
 		<li><i className="devicon-webpack-plain colored"></i></li>
+		<li><i className="devicon-babel-plain colored"></i></li>
+		<li><i className="devicon-react-original colored"></i></li>
+		<li><i className="devicon-sass-original colored"></i></li>
+		<li><i className="devicon-bootstrap-plain colored"></i></li>
 	</ul>
 );
 
