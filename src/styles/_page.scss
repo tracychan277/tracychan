@@ -68,6 +68,7 @@ main {
 }
 
 footer {
+	margin-top: $container-margin;
 	border-top: $divider-border;
 	padding-top: $container-padding;
 	color: $text-muted;
@@ -84,7 +85,21 @@ footer {
 .column {
 	padding: 0 $container-padding;
 	
-	@include media-breakpoint-up(sm) {
+	&:nth-child(even) {
+		margin-top: 1rem;
+	}
+
+	@include media-breakpoint-up(md) {
 		@include make-col(6);
+
+		&:nth-child(even) {
+			margin-top: 0;
+		}
+	}
+}
+
+.card {
+	&:last-child {
+		margin-bottom: 0;
 	}
 }

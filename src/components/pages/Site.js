@@ -6,8 +6,10 @@ const Site = () => (
 	<main>
 		<h1>This Site</h1>
 		<p>You can view the source code for this site at <a href="https://github.com/tracychan277/tracychan" rel="noopener noreferrer" target="_blank"><FaGithub/> GitHub</a>. This static site is hosted on an AWS S3 bucket and served through CloudFront.</p>
-		<Card heading="Development Tools"><DevTools/></Card>
-		<Card heading="Frontend Libraries"><Frontend/></Card>
+		<div className="row">
+			<Card heading="Development Tools"><DevTools/></Card>
+			<Card heading="Frontend Libraries"><Frontend/></Card>
+		</div>
 	</main>
 );
 
