@@ -2,8 +2,8 @@ import React from 'react';
 
 const NoRoute = () => (
 	<main>
-		<div className="alert alert-danger">
-			<span className="badge badge-danger">Whoops!</span> This page could not be found. <a href="/" className="alert-link">Click here</a> to go back to the homepage.
+		<div className="alert alert-warning">
+			<span className="badge badge-warning">Whoops!</span> This page could not be found. <a href="/" className="alert-link">Click here</a> to go back to the homepage.
 		</div>
 	</main>
 );
