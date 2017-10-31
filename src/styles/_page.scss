@@ -67,7 +67,11 @@ main {
 	text-align: center;
 
 	h1 {
-		@extend .display-4;
+		font-weight: $heading-font-weight;
+
+		@include media-breakpoint-up(sm) {
+			font-size: 3.5em;
+		}
 	}
 
 	p {

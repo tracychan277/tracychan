@@ -34,7 +34,7 @@ $devicons-list: 'amazonwebservices-original', 'babel-plain', 'bootstrap-plain', 
 
 @each $devicon in $devicons-list {
 	$dash-index: str-index($devicon, '-');
-	$directory: str_slice($devicon, 0, ($dash-index) - 1);
+	$directory: str_slice($devicon, 0, $dash-index - 1);
 
 	.devicon-#{$devicon} {
 		mask-image: url('~devicon-2.2/icons/#{$directory}/#{$devicon}.svg');
