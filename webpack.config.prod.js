@@ -71,7 +71,7 @@ module.exports = {
 			minify: {
 				collapseWhitespace: true
 			},
-			template: 'index.template.ejs',
+			template: './public/index.html',
 			inject: 'body'
 		}),
 		new ExtractTextPlugin('styles.css'),
