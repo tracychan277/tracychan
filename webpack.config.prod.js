@@ -75,7 +75,10 @@ module.exports = {
 			inject: 'body'
 		}),
 		new ExtractTextPlugin('styles.css'),
-		new webpack.optimize.UglifyJsPlugin({minimize: true}),
+		new webpack.optimize.UglifyJsPlugin({
+			minimize: true,
+			sourceMap: true
+		}),
 		new CompressionPlugin({
 			asset: '[path].gz[query]',
 			algorithm: 'gzip',
