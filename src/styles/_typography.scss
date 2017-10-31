@@ -6,6 +6,16 @@ a:hover {
 	text-decoration: none;
 }
 
+dl {
+	dd {
+		margin-bottom: $list-margin;
+	}
+
+	> :last-child dd {
+		margin-bottom: 0;
+	}
+}
+
 .contact-list {
 	padding-left: 0;
 	

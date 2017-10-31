@@ -25,9 +25,9 @@ svg {
 i[class^="devicon-"] {
 	display: block;
 	background-color: $body-color;
-	margin: 0.5rem auto;
-	width: 4em;
-	height: 4em;
+	margin: $devicon-margin;
+	width: $devicon-size;
+	height: $devicon-size;
 }
 
 .devicon-amazonwebservices-original {
