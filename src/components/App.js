@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, NavLink, Switch} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -15,7 +15,7 @@ const Header = () => (
 
 const Nav = () => (
 	<nav>
-		<a href="/">Tracy Chan</a>
+		<Link to="/">Tracy Chan</Link>
 		<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span className="navbar-toggler-icon"></span>
 		</button>
