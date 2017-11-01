@@ -4,7 +4,7 @@ const About = () => (
 	<main>
 		<div className="jumbotron">
 			<h1>About Me</h1>
-			<p>I was interested in web design and development pretty much as soon as I had access to the internet, and self-taught myself HTML and CSS from the age of 13.</p>
+			<p>I was interested in web design and development as a teenager, pretty much as soon as I had access to the internet, and managed to turn my hobby into a profession.</p>
 		</div>
 		<h2>Professional development journey</h2>
 		<Timeline/>
@@ -36,12 +36,12 @@ const Timeline = () => (
 		<li>
 			<h3>2015 - 2016</h3>
 			<p>8 months</p>
-			<p>Small business client website project built in CakePHP involving all phases of the SDLC from conception to delivery.</p>
+			<p>Small business client website project built in CakePHP and Bootstrap involving all phases of the SDLC from conception to delivery.</p>
 		</li>
 		<li>
 			<h3>2016</h3>
 			<p>1.5 years</p>
-			<p>Professional full-stack web-development experience working in at an eCommerce web development agency specialising in Magento.</p>
+			<p>Professional full-stack web-development experience working at an eCommerce web development agency specialising in Magento.</p>
 		</li>
 		<li>
 			<h3>2017 - present</h3>
