@@ -19,8 +19,12 @@ const Timeline = (props) => (
 		{
 			props.events.map((event) => {
 				return (
-					<Event key={event.year} year={event.year} icons={event.icons}>
-						{event.description}
+						<Event key={event.year}
+							year={event.year}
+							duration={event.duration}
+							icons={event.icons}
+						>
+							{event.description}
 						</Event>
 					)
 			})
