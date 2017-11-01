@@ -42,7 +42,7 @@ const Event = (props) => (
 		<Card heading={props.year}>
 			<div className="event">
 				{props.duration ? <p className="duration">{props.duration}</p> : null}
-				<p>{props.children}</p>
+				<p className="description">{props.children}</p>
 				<p className="icons">
 					{
 						props.icons ?

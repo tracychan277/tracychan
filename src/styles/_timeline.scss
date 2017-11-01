@@ -45,4 +45,9 @@
 	.icons {
 		float: right;
 	}
+
+	// If there is no event duration subheading present
+	.description:first-child {
+		margin-top: 0.5rem;
+	}
 }
