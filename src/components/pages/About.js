@@ -10,7 +10,7 @@ const About = () => (
 			<p>I was interested in web design and development as a teenager, pretty much as soon as I had access to the internet, and managed to turn my hobby into a profession.</p>
 		</div>
 		<h2>Professional development journey</h2>
-		<Timeline events={timelineEvents.timelineEvents}/>
+		<Timeline events={timelineEvents}/>
 	</main>
 );
 
