@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DevIcon from '../Devicon';
+import DevIcon from '../DevIcon';
 import timelineEvents from '../../timelineEvents.json';
 
 const About = () => (
