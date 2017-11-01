@@ -1,6 +1,19 @@
 .timeline {
-	padding-top: $timeline-padding;
-	padding-left: 0;
+	position: relative;
+	padding: $timeline-padding 0;
+
+	@include media-breakpoint-up(md) {
+		&::after {
+			content: '';
+			position: absolute;
+			width: $timeline-line-width;
+			background-color: $body-color;
+			top: 0;
+			left: 50%;
+			bottom: 0;
+			margin-left: -($timeline-line-width / 2);
+		}
+	}
 
 	li {
 		@include clearfix();
