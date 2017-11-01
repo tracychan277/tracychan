@@ -30,8 +30,6 @@ i[class^="devicon-"] {
 	height: $devicon-size;
 }
 
-$devicons-list: 'amazonwebservices-original', 'babel-plain', 'bootstrap-plain', 'react-original', 'sass-original', 'webpack-plain';
-
 @each $devicon in $devicons-list {
 	$dash-index: str-index($devicon, '-');
 	$directory: str_slice($devicon, 0, $dash-index - 1);
