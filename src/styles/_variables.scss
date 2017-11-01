@@ -57,3 +57,12 @@ $list-margin: 0.5rem;
 $timeline-padding: 1.5rem;
 $timeline-mobile-padding: 3rem;
 $timeline-line-width: 6px;
+
+$timeline-arrow-offset: 15px;
+$timeline-mobile-arrow-offset: 39px;
+
+$left-arrow-border-width: 10px 10px 10px 0;
+$left-arrow-border-color: transparent $white transparent transparent;
+
+$right-arrow-border-width: 10px 0 10px 10px;
+$right-arrow-border-color: transparent transparent transparent $white;

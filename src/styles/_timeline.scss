@@ -47,10 +47,10 @@
 			content: '';
 			position: absolute;
 			top: $timeline-mobile-padding;
-			left: 38px;
-			border: medium solid $white;
-			border-width: 10px 10px 10px 0;
-			border-color: transparent $white transparent transparent;
+			left: $timeline-mobile-arrow-offset;
+			border-style: solid;
+			border-width: $left-arrow-border-width;
+			border-color: $left-arrow-border-color;
 			z-index: 1;
 		}
 
@@ -60,9 +60,9 @@
 
 			&:before {
 				left: auto;
-				right: 15px;
-				border-width: 10px 0 10px 10px;
-				border-color: transparent transparent transparent $white;
+				right: $timeline-arrow-offset;
+				border-width: $right-arrow-border-width;
+				border-color: $right-arrow-border-color;
 			}
 		}
 	}
@@ -76,10 +76,10 @@
 				padding-right: 0;
 
 				&:before {
-					left: 5px;
+					left: $timeline-arrow-offset;
 					right: auto;
-					border-width: 10px 10px 10px;
-					border-color: transparent $white transparent transparent;
+					border-width: $left-arrow-border-width;
+					border-color: $left-arrow-border-color;
 				}
 			}
 		}
