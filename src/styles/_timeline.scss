@@ -1,4 +1,5 @@
 .timeline {
+	padding-top: $timeline-padding;
 	padding-left: 0;
 
 	li {
@@ -7,13 +8,13 @@
 	}
 
 	.column {
-		margin-bottom: 1rem;
-		padding-left: 3rem;
+		margin-bottom: $timeline-padding;
+		padding-left: $timeline-mobile-padding;
 		padding-right: 0;
 
 		@include media-breakpoint-up(md) {
 			padding-left: 0;
-			padding-right: 1.5rem;
+			padding-right: $timeline-padding;
 		}
 	}
 
@@ -22,9 +23,26 @@
 			float: right;
 
 			@include media-breakpoint-up(md) {
-				padding-left: 1.5rem;
+				padding-left: $timeline-padding;
 				padding-right: 0;
 			}
 		}
+	}
+
+	h3 {
+		margin-bottom: 0;
+	}
+
+	p {
+		margin-bottom: 0;
+
+		&.duration {
+			@extend .text-muted;
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	.icons {
+		float: right;
 	}
 }

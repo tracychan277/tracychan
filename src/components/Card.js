@@ -5,7 +5,7 @@ const Card = (props) => (
 	<div className="column">
 		<div className="card">
 			<div className="card-body">
-				<h2 className="card-title">{props.heading}</h2>
+				<h3 className="card-title">{props.heading}</h3>
 				{props.children}
 			</div>
 		</div>

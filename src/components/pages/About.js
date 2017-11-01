@@ -41,8 +41,9 @@ const Event = (props) => (
 	<li>
 		<Card heading={props.year}>
 			<div className="event">
-				{props.duration ? <p>{props.duration}</p> : null}
-				<p>
+				{props.duration ? <p className="duration">{props.duration}</p> : null}
+				<p>{props.children}</p>
+				<p className="icons">
 					{
 						props.icons ?
 						props.icons.map((name) => {
@@ -50,7 +51,6 @@ const Event = (props) => (
 						}) : null
 					}
 				</p>
-				<p>{props.children}</p>
 			</div>
 		</Card>
 	</li>
