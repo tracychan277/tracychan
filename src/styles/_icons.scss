@@ -28,6 +28,13 @@ i[class^="devicon-"] {
 	margin: $devicon-margin;
 	width: $devicon-size;
 	height: $devicon-size;
+
+	.timeline & {
+		display: inline-block;
+		margin: $timeline-icon-margin;
+		width: $timeline-icon-size;
+		height: $timeline-icon-size;
+	}
 }
 
 @each $devicon in $devicons-list {
