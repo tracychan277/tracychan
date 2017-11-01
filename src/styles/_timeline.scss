@@ -43,22 +43,11 @@
 		padding-left: $timeline-mobile-padding;
 		padding-right: 0;
 
-		&:before {
-			content: '';
-			position: absolute;
-			top: $timeline-mobile-padding;
-			left: $timeline-mobile-arrow-offset;
-			border-style: solid;
-			border-width: $left-arrow-border-width;
-			border-color: $left-arrow-border-color;
-			z-index: 1;
-		}
-
 		&:after {
 			content: '';
 			position: absolute;
 			top: $timeline-mobile-padding - 0.2rem;
-			left: 11px;
+			left: $timeline-marker-mobile-offset;
 			width: $marker-size;
 			height: $marker-size;
 			background-color: $marker-fill-color;
@@ -71,16 +60,9 @@
 			padding-left: 0;
 			padding-right: $timeline-padding;
 
-			&:before {
-				left: auto;
-				right: $timeline-arrow-offset;
-				border-width: $right-arrow-border-width;
-				border-color: $right-arrow-border-color;
-			}
-
 			&:after {
 				left: auto;
-				right: -13px;
+				right: $timeline-marker-offset;
 			}
 		}
 	}
@@ -93,15 +75,8 @@
 				padding-left: $timeline-padding;
 				padding-right: 0;
 
-				&:before {
-					left: $timeline-arrow-offset;
-					right: auto;
-					border-width: $left-arrow-border-width;
-					border-color: $left-arrow-border-color;
-				}
-
 				&:after {
-					left: -13px;
+					left: $timeline-marker-offset;
 					right: auto;
 				}
 			}
