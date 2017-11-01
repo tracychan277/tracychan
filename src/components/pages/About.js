@@ -43,6 +43,7 @@ const Timeline = () => (
 		<li>
 			<h3>2015 - 2016</h3>
 			<p>8 months</p>
+			<DevIcon name="sourcetree-original"/>
 			<DevIcon name="apache-plain"/>
 			<DevIcon name="mysql-plain"/>
 			<DevIcon name="bootstrap-plain"/>
@@ -63,6 +64,7 @@ const Timeline = () => (
 		</li>
 		<li>
 			<h3>2017 - present</h3>
+			<DevIcon name="github-original"/>
 			<DevIcon name="webpack-plain"/>
 			<DevIcon name="babel-plain"/>
 			<DevIcon name="react-original"/>
