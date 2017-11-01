@@ -58,8 +58,17 @@ $timeline-padding: 3rem;
 $timeline-mobile-padding: 4.5rem;
 $timeline-line-width: 6px;
 
+$timeline-arrow-offset: 39px;
+$timeline-arrow-mobile-offset: 63px;
+
 $timeline-marker-offset: -13px;
 $timeline-marker-mobile-offset: 11px;
+
+$arrow-border-size: 10px;
+$left-arrow-border-color: transparent transparent $white $white;
+$left-arrow-box-shadow: -2px 2px 2px $grey-light;
+$right-arrow-border-color: $white $white transparent transparent;
+$right-arrow-box-shadow: 2px -2px 2px $grey-light;
 
 $marker-size: 25px;
 $marker-border-width: 4px;
