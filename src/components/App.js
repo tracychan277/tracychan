@@ -42,10 +42,10 @@ const App = () => (
 		<div className="container">
 			<Header/>
 			<Switch>
-				<Route exact path="/" component={Home} />
-				<Route path="/about-me" component={About} />
-				<Route path="/this-site" component={Site} />
-				<Route path="/contact" component={Contact} />
+				<Route exact path="/" component={Home}/>
+				<Route path="/about-me" component={About}/>
+				<Route path="/this-site" component={Site}/>
+				<Route path="/contact" component={Contact}/>
 				<Route component={NoRoute}/>
 			</Switch>
 			<Footer/>
