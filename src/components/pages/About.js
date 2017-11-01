@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import DevIcon from '../Devicon';
 
 const About = () => (
@@ -14,63 +15,51 @@ const About = () => (
 
 const Timeline = () => (
 	<ul className="timeline">
-		<li>
-			<h3>2005</h3>
-			<p>3 years</p>
-			<DevIcon name="html5-plain"/>
-			<DevIcon name="css3-plain"/>
-			<DevIcon name="photoshop-plain"/>
-			<p>Amateur web design and development as a hobby. Self-taught basic HTML, CSS, JavaScript, and image creation/editing in Adobe Photoshop.</p>
-		</li>
-		<li>
-			<h3>2008</h3>
-			<p>2.5 years</p>
-			<p>Part-time/casual retail work experience at a small confectionery store and large supermarket.</p>
-		</li>
-		<li>
-			<h3>2011</h3>
-			<DevIcon name="java-plain"/>
-			<DevIcon name="vim-plain"/>
-			<p>5 years</p>
-			<p>Formal programming and web development studies at university graduating with a Bachelor of Information Technology and Systems/Bachelor of Arts double degree.</p>
-		</li>
-		<li>
-			<h3>2015</h3>
-			<p>8 months</p>
-			<DevIcon name="oracle-original"/>
-			<p>Internship working in the government doing data fixes in Oracle SQL and proprietary SAS programming language.</p>
-		</li>
-		<li>
-			<h3>2015 - 2016</h3>
-			<p>8 months</p>
-			<DevIcon name="sourcetree-original"/>
-			<DevIcon name="apache-plain"/>
-			<DevIcon name="mysql-plain"/>
-			<DevIcon name="bootstrap-plain"/>
-			<p>Small business client website project built in CakePHP and Bootstrap involving all phases of the SDLC from conception to delivery.</p>
-		</li>
-		<li>
-			<h3>2016</h3>
-			<p>1.5 years</p>
-			<DevIcon name="ubuntu-plain"/>
-			<DevIcon name="phpstorm-plain"/>
-			<DevIcon name="git-plain"/>
-			<DevIcon name="amazonwebservices-original"/>
-			<DevIcon name="nginx-original"/>
-			<DevIcon name="php-plain"/>
-			<DevIcon name="jquery-plain"/>
-			<DevIcon name="sass-original"/>
-			<p>Professional full-stack web-development experience working at an eCommerce web development agency specialising in Magento.</p>
-		</li>
-		<li>
-			<h3>2017 - present</h3>
-			<DevIcon name="github-original"/>
-			<DevIcon name="webpack-plain"/>
-			<DevIcon name="babel-plain"/>
-			<DevIcon name="react-original"/>
-			<p>Exploring modern front-end development technologies and frameworks, in particular React, and seeking an exciting new role in front-end development.</p>
-		</li>
+		<Event year="2005" duration="3 years" icons={['html5-plain', 'css3-plain', 'photoshop-plain']}>
+			Amateur web design and development as a hobby. Self-taught basic HTML, CSS, JavaScript, and image creation/editing in Adobe Photoshop.
+		</Event>
+		<Event year="2008" duration="2.5 years">
+			Part-time/casual retail work experience at a small confectionery store and large supermarket.
+		</Event>
+		<Event year="2011" duration="5 years" icons={['java-plain', 'vim-plain']}>
+			Formal programming and web development studies at university graduating with a Bachelor of Information Technology and Systems/Bachelor of Arts double degree.
+		</Event>
+		<Event year="2015" duration="8 months" icons={['oracle-original']}>
+			Internship working in the government doing data fixes in Oracle SQL and proprietary SAS programming language.
+		</Event>
+		<Event year="2015 - 2016" duration="8 months" icons={['sourcetree-original', 'apache-plain', 'mysql-plain', 'bootstrap-plain']}>
+			Small business client website project built in CakePHP and Bootstrap involving all phases of the SDLC from conception to delivery.
+		</Event>
+		<Event year="2016" duration="1.5 years" icons={['ubuntu-plain', 'phpstorm-plain', 'git-plain', 'amazonwebservices-original', 'nginx-original', 'php-plain', 'jquery-plain', 'sass-original']}>
+			Professional full-stack web-development experience working at an eCommerce web development agency specialising in Magento.
+		</Event>
+		<Event year="2017 - present" icons={['github-original', 'webpack-plain', 'babel-plain', 'react-original']}>
+			Exploring modern front-end development technologies and frameworks, in particular React, and seeking an exciting new role in front-end development.
+		</Event>
 	</ul>
 );
+
+const Event = (props) => (
+	<li>
+		<h3>{props.year}</h3>
+		{props.duration ? <p>{props.duration}</p> : null}
+		<p>
+			{
+				props.icons ?
+				props.icons.map((name) => {
+					return <DevIcon key={name} name={name}/>
+				}) : null
+			}
+		</p>
+		<p>{props.children}</p>
+	</li>
+);
+
+Event.propTypes = {
+	year: PropTypes.string,
+	duration: PropTypes.string,
+	icons: PropTypes.array,
+	children: PropTypes.string
+}
 
 export default About;
