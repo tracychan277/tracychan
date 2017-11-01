@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DevIcon from '../DevIcon';
+import Card from '../Card';
 import timelineEvents from '../../timelineEvents.json';
 
 const About = () => (
@@ -38,17 +39,20 @@ Timeline.propTypes = {
 
 const Event = (props) => (
 	<li>
-		<h3>{props.year}</h3>
-		{props.duration ? <p>{props.duration}</p> : null}
-		<p>
-			{
-				props.icons ?
-				props.icons.map((name) => {
-					return <DevIcon key={name} name={name}/>
-				}) : null
-			}
-		</p>
-		<p>{props.children}</p>
+		<Card heading={props.year}>
+			<div className="event">
+				{props.duration ? <p>{props.duration}</p> : null}
+				<p>
+					{
+						props.icons ?
+						props.icons.map((name) => {
+							return <DevIcon key={name} name={name}/>
+						}) : null
+					}
+				</p>
+				<p>{props.children}</p>
+			</div>
+		</Card>
 	</li>
 );
 

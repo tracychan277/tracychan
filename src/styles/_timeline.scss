@@ -1,0 +1,14 @@
+.timeline {
+	padding-left: 0;
+
+	li {
+		@include clearfix();
+		list-style-type: none;
+	}
+
+	> :nth-child(even) {	
+		.column {
+			float: right;
+		}
+	}
+}
