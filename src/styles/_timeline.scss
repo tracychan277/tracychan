@@ -48,9 +48,10 @@
 			position: absolute;
 			top: $timeline-mobile-padding;
 			left: 38px;
-			border: medium solid $body-color;
+			border: medium solid $white;
 			border-width: 10px 10px 10px 0;
-			border-color: transparent $body-color transparent transparent;
+			border-color: transparent $white transparent transparent;
+			z-index: 1;
 		}
 
 		@include media-breakpoint-up(md) {
@@ -59,9 +60,9 @@
 
 			&:before {
 				left: auto;
-				right: 14px;
+				right: 15px;
 				border-width: 10px 0 10px 10px;
-				border-color: transparent transparent transparent $body-color;
+				border-color: transparent transparent transparent $white;
 			}
 		}
 	}
@@ -75,10 +76,10 @@
 				padding-right: 0;
 
 				&:before {
-					left: 4px;
+					left: 5px;
 					right: auto;
 					border-width: 10px 10px 10px;
-					border-color: transparent $body-color transparent transparent;
+					border-color: transparent $white transparent transparent;
 				}
 			}
 		}
