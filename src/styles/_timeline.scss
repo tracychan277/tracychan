@@ -43,6 +43,18 @@
 		padding-left: $timeline-mobile-padding;
 		padding-right: 0;
 
+		&:before {
+			content: '';
+			position: absolute;
+			top: $timeline-mobile-padding;
+			left: 63px;
+			border: 10px solid $white;
+			border-color: transparent transparent $white $white;
+			transform: rotate(45deg);
+			box-shadow: -2px 2px 2px $grey-light;
+			z-index: 1;
+		}
+
 		&:after {
 			content: '';
 			position: absolute;
@@ -60,6 +72,13 @@
 			padding-left: 0;
 			padding-right: $timeline-padding;
 
+			&:before {
+				left: auto;
+				right: 39px;
+				border-color: $white $white transparent transparent;
+				box-shadow: 2px -2px 3px $grey-light;
+			}
+
 			&:after {
 				left: auto;
 				right: $timeline-marker-offset;
@@ -74,6 +93,13 @@
 			@include media-breakpoint-up(md) {
 				padding-left: $timeline-padding;
 				padding-right: 0;
+
+				&:before {
+					left: 39px;
+					right: auto;
+					border-color: transparent transparent $white $white;
+					box-shadow: -2px 2px 2px $grey-light;
+				}
 
 				&:after {
 					left: $timeline-marker-offset;
