@@ -57,6 +57,18 @@
 			border-width: 10px 10px 10px 0;
 			border-color: transparent $body-color transparent transparent;
 		}
+
+		@include media-breakpoint-up(md) {
+			&:before {
+				content: '';
+				position: absolute;
+				top: $timeline-mobile-padding;
+				left: 14px;
+				border: medium solid $body-color;
+				border-width: 10px 10px 10px 0;
+				border-color: transparent $body-color transparent transparent;
+			}
+		}
 	}
 
 	> :nth-child(even) {	
@@ -76,11 +88,11 @@
 
 	p {
 		margin-bottom: 0;
+	}
 
-		&.duration {
-			@extend .text-muted;
-			margin-bottom: $headings-margin-bottom;
-		}
+	.duration {
+		@extend .text-muted;
+		margin-bottom: $headings-margin-bottom;
 	}
 
 	.icons {
