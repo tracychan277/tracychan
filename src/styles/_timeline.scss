@@ -18,6 +18,12 @@
 	li {
 		@include clearfix();
 		list-style-type: none;
+
+		&:last-of-type {
+			.column {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	.column {
