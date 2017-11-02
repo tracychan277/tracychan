@@ -126,7 +126,7 @@
 				left: auto;
 				right: $timeline-arrow-offset - 1px;
 				border-color: $right-arrow-border-color;
-				box-shadow: $right-arrow-box-shadow;
+				box-shadow: $right-arrow-border-box-shadow;
 			}
 
 			// Arrows pointing right
@@ -134,6 +134,7 @@
 				left: auto;
 				right: $timeline-arrow-offset;
 				border-color: $right-arrow-color;
+				box-shadow: $right-arrow-box-shadow;
 			}
 		}
 	}
