@@ -1,7 +1,7 @@
 // Colours
 $grey-light: #e5e5e5;
 
-$box-shadow: 1px 1px 5px $grey-light;
+$box-shadow: 0 0 5px $grey-light;
 
 // Body
 $container-padding: 1rem;
@@ -66,11 +66,12 @@ $arrow-border-size: 10px;
 
 $left-arrow-color: transparent transparent $white $white;
 $left-arrow-border-color: transparent transparent $grey-light $grey-light;
-$left-arrow-box-shadow: 1px 1px 5px $grey-light;
+$left-arrow-border-box-shadow: -5px 0 5px -5px $grey-light;
+$left-arrow-box-shadow: 1px 5px 5px -5px $grey-light;
 
 $right-arrow-color: $white $white transparent transparent;
 $right-arrow-border-color: $grey-light $grey-light transparent transparent;
-$right-arrow-border-box-shadow: 1px -5px 5px -5px $grey-light;
+$right-arrow-border-box-shadow: 0 -5px 5px -5px $grey-light;
 $right-arrow-box-shadow: 5px 1px 5px -5px $grey-light;
 
 $marker-size: 25px;
