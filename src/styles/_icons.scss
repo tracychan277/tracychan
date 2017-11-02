@@ -4,23 +4,6 @@ svg {
 	height: $icon-font-size;
 }
 
-// Development icons list
-.dev-icons {
-	@extend .row;
-	@include clearfix();
-	padding-left: 0;
-
-	li {
-		@include make-col(4);
-		float: left;
-		list-style-type: none;
-
-		@include media-breakpoint-up(md) {
-			@include make-col(2);
-		}
-	}
-}
-
 // Devicon icons
 i[class^="devicon-"] {
 	display: block;
@@ -43,5 +26,22 @@ i[class^="devicon-"] {
 
 	.devicon-#{$devicon} {
 		mask-image: url('~devicon-2.2/icons/#{$directory}/#{$devicon}.svg');
+	}
+}
+
+// Development icons list
+.dev-icons {
+	@extend .row;
+	@include clearfix();
+	padding-left: 0;
+
+	li {
+		@include make-col(4);
+		float: left;
+		list-style-type: none;
+
+		@include media-breakpoint-up(md) {
+			@include make-col(2);
+		}
 	}
 }

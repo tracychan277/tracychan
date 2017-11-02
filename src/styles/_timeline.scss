@@ -2,6 +2,7 @@
 	position: relative;
 	padding: $timeline-padding 0;
 
+	// Vertical line
 	&:after {
 		content: '';
 		position: absolute;
@@ -13,6 +14,7 @@
 		margin-left: -($timeline-line-width / 2);
 	}
 
+	// Vertical line on desktop
 	@include media-breakpoint-up(md) {
 		&:after {
 			content: '';
@@ -26,6 +28,7 @@
 		}
 	}
 
+	// List of timeline events
 	li {
 		@include clearfix();
 		list-style-type: none;
@@ -37,28 +40,18 @@
 		}
 	}
 
+	// Timeline event columns
 	.column {
 		position: relative;
 		margin-bottom: $timeline-padding;
 		padding-left: $timeline-mobile-padding;
 		padding-right: 0;
 
-		&:before {
-			content: '';
-			position: absolute;
-			top: $timeline-mobile-padding;
-			left: $timeline-arrow-mobile-offset;
-			border: $arrow-border-size solid $white;
-			border-color: $left-arrow-border-color;
-			transform: rotate(45deg);
-			box-shadow: $left-arrow-box-shadow;
-			z-index: 1;
-		}
-
+		// Timeline marker
 		&:after {
 			content: '';
 			position: absolute;
-			top: $timeline-mobile-padding - 0.2rem;
+			top: $timeline-mobile-padding;
 			left: $timeline-marker-mobile-offset;
 			width: $marker-size;
 			height: $marker-size;
@@ -68,16 +61,10 @@
 			z-index: 1;
 		}
 
+		// Timeline marker on desktop
 		@include media-breakpoint-up(md) {
 			padding-left: 0;
 			padding-right: $timeline-padding;
-
-			&:before {
-				left: auto;
-				right: $timeline-arrow-offset;
-				border-color: $right-arrow-border-color;
-				box-shadow: $right-arrow-box-shadow;
-			}
 
 			&:after {
 				left: auto;
@@ -86,21 +73,15 @@
 		}
 	}
 
+	// Alternating timeline event columns on desktop
 	> :nth-child(even) {	
 		.column {
-			float: right;
-
 			@include media-breakpoint-up(md) {
+				float: right;
 				padding-left: $timeline-padding;
 				padding-right: 0;
 
-				&:before {
-					left: $timeline-arrow-offset;
-					right: auto;
-					border-color: $left-arrow-border-color;
-					box-shadow: $left-arrow-box-shadow;
-				}
-
+				// Alternating timeline marker
 				&:after {
 					left: $timeline-marker-offset;
 					right: auto;
@@ -109,11 +90,78 @@
 		}
 	}
 
-	h2 {
-		margin-bottom: 0;
+	// Timeline event column cards
+	.card {
+		position: relative;
+
+		// Faux border for arrows pointing left
+		&:before {
+			content: '';
+			position: absolute;
+			top: $timeline-mobile-padding - 1px;
+			left: $timeline-arrow-offset - 1px;
+			border: ($arrow-border-size + 1) solid $grey-light;
+			border-color: $left-arrow-border-color;
+			transform: rotate(45deg);
+			box-shadow: $left-arrow-box-shadow;
+			z-index: 1;
+		}
+
+		// Arrows pointing left
+		&:after {
+			content: '';
+			position: absolute;
+			top: $timeline-mobile-padding;
+			left: $timeline-arrow-offset;
+			border: $arrow-border-size solid $white;
+			border-color: $left-arrow-color;
+			transform: rotate(45deg);
+			z-index: 1;
+		}
+
+		// Arrows pointing right on desktop
+		@include media-breakpoint-up(md) {
+			// Faux border for arrows pointing right
+			&:before {
+				left: auto;
+				right: $timeline-arrow-offset - 1px;
+				border-color: $right-arrow-border-color;
+				box-shadow: $right-arrow-box-shadow;
+			}
+
+			// Arrows pointing right
+			&:after {
+				left: auto;
+				right: $timeline-arrow-offset;
+				border-color: $right-arrow-color;
+			}
+		}
 	}
 
-	p {
+	// Alternating timeline event column cards on desktop
+	> :nth-child(even) {
+		.card {
+			// Arrows pointing left on desktop
+			@include media-breakpoint-up(md) {
+				// Faux border for arrows pointing left
+				&:before {
+					left: $timeline-arrow-offset - 1px;
+					right: auto;
+					border-color: $left-arrow-border-color;
+					box-shadow: $left-arrow-box-shadow;
+				}
+
+				// Arrows pointing left
+				&:after {
+					left: $timeline-arrow-offset;
+					right: auto;
+					border-color: $left-arrow-color;
+				}
+			}
+		}
+	}
+
+	h2, p {
 		margin-bottom: 0;
 	}
 
@@ -126,7 +174,7 @@
 		float: right;
 	}
 
-	// If there is no event duration subheading present
+	// If there is no event duration subheading above the description
 	.description:first-child {
 		margin-top: $headings-margin-bottom;
 	}

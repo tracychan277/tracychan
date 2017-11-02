@@ -1,0 +1,9 @@
+.card {
+	box-shadow: $box-shadow;
+}
+
+.card-body {
+	> :last-child {
+		margin-bottom: 0;
+	}
+}

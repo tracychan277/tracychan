@@ -55,20 +55,22 @@ $list-margin: 1.5rem;
 
 // Timeline
 $timeline-padding: 3rem;
-$timeline-mobile-padding: 4.5rem;
+$timeline-mobile-padding: 70px;
 $timeline-line-width: 6px;
-
-$timeline-arrow-offset: 39px;
-$timeline-arrow-mobile-offset: 63px;
 
 $timeline-marker-offset: -13px;
 $timeline-marker-mobile-offset: 11px;
 
+$timeline-arrow-offset: -10px;
 $arrow-border-size: 10px;
-$left-arrow-border-color: transparent transparent $white $white;
-$left-arrow-box-shadow: -1px 1px 1px $grey-light;
-$right-arrow-border-color: $white $white transparent transparent;
-$right-arrow-box-shadow: 2px -2px 2px $grey-light;
+
+$left-arrow-color: transparent transparent $white $white;
+$left-arrow-border-color: transparent transparent $grey-light $grey-light;
+$left-arrow-box-shadow: -1px 1px 5px $grey-light;
+
+$right-arrow-color: $white $white transparent transparent;
+$right-arrow-border-color: $grey-light $grey-light transparent transparent;
+$right-arrow-box-shadow: 1px -1px 5px $grey-light;
 
 $marker-size: 25px;
 $marker-border-width: 4px;
