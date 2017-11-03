@@ -9,6 +9,7 @@ h1, h2 {
 		display: block;
 		color: $red;
 		font-size: 4em;
+		-webkit-text-stroke: 2px $body-color;
 		animation-name: rainbow;
 		animation-duration: 4s;
 		animation-iteration-count: infinite;
