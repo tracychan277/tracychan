@@ -2,6 +2,15 @@ h1, h2 {
 	font-weight: $heading-font-weight;
 }
 
+.no-route {
+	text-align: center;
+
+	span {
+		display: block;
+		font-size: 4em;
+	}
+}
+
 a:hover {
 	text-decoration: none;
 }

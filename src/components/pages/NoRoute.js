@@ -2,9 +2,8 @@ import React from 'react';
 
 const NoRoute = () => (
 	<main>
-		<div className="alert alert-warning">
-			<span className="badge badge-warning">Whoops!</span> This page could not be found. <a href="/" className="alert-link">Click here</a> to go back to the homepage.
-		</div>
+		<h1 className="no-route"><span>404</span> Not Found</h1>
+		<p className="no-route">The page &quot;{window.location.pathname}&quot; could not be found or does not exist. <a href="/">Click here</a> to go back to the homepage.</p>
 	</main>
 );
 
