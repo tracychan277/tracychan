@@ -109,6 +109,7 @@ footer {
 
 .column {
 	padding: 0 $container-padding;
+	width: 100%;
 	
 	&:nth-child(even) {
 		margin-top: 1rem;
