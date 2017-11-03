@@ -16,6 +16,7 @@ h1, h2 {
 			2px 2px 0 $body-color;
 		animation-name: rainbow;
 		animation-duration: 10s;
+		animation-delay: 1s;
 		animation-iteration-count: infinite;
 		animation-timing-function: ease;
 	}
