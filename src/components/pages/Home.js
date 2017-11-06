@@ -14,9 +14,11 @@ const Home = () => (
 			<MarketingRow heading="Responsive web design" image={ResponsiveSvg}>
 				See your design come to life.
 			</MarketingRow>
+			<hr/>
 			<MarketingRow heading="Modern front-end technologies and frameworks" image={CodeSvg}>
 				<a href="/this-site">Click here</a> to see what technologies were used to build this site.
 			</MarketingRow>
+			<hr/>
 			<MarketingRow heading="Cross-browser testing" image={CrossBrowserSvg}>
 				Hello
 			</MarketingRow>

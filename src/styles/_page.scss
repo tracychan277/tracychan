@@ -123,3 +123,15 @@ footer {
 		}
 	}
 }
+
+.marketing-rows .row {
+	padding: $container-padding 0;
+
+	&:first-of-type {
+		padding-top: 0;
+	}
+}
+
+hr {
+	border-top: $divider-border;
+}
