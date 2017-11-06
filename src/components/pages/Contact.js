@@ -30,7 +30,7 @@ const ContactForm = () => (
 			<div className="row">
 				<div className="col">
 					<input id="first-name"
-						name="first-name"
+						name="Field1"
 						type="text"
 						className="form-control"
 						tabIndex="1"
@@ -38,7 +38,7 @@ const ContactForm = () => (
 				</div>
 				<div className="col">
 					<input id="last-name"
-						name="last-name"
+						name="Field2"
 						type="text"
 						className="form-control"
 						tabIndex="2"
@@ -50,7 +50,7 @@ const ContactForm = () => (
 			<div className="input-group">
 				<div className="input-group-addon">@</div>
 				<input id="email"
-					name="email"
+					name="Field3"
 					type="email"
 					spellCheck="false"
 					className="form-control"
@@ -61,7 +61,7 @@ const ContactForm = () => (
 		</div>
 		<div className="form-group">
 			<textarea id="message"
-				name="message"
+				name="Field4"
 				className="form-control"
 				spellCheck="true"
 				rows="10" cols="50"
