@@ -25,7 +25,8 @@ const Home = () => (
 		</div>
 		<p className="text-muted"><small>Vector graphics designed by <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener noreferrer">Freepik</a> at Flaticon.</small></p>
 		<div className="jumbotron">
-			<p>Like what you see? I am open to contract and full-time front-end development opportunities. Feel free to contact me for a chat.</p>
+			<h3>Like what you see?</h3>
+			<p>I am open to contract and full-time front-end development opportunities. Feel free to contact me for a chat.</p>
 			<a className="btn btn-success btn-lg" href="/contact">Get in touch</a>
 		</div>
 	</main>
