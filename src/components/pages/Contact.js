@@ -24,6 +24,7 @@ class ContactForm extends Component {
 		lastName: '',
 		email: '',
 		message: '',
+		emailError: '',
 		firstNameValid: false,
 		lastNameValid: false,
 		emailValid: false,
@@ -45,6 +46,7 @@ class ContactForm extends Component {
 		let lastNameValid = this.state.lastNameValid;
 		let messageValid = this.state.messageValid;
 		let emailValid = this.state.emailValid;
+		let emailError = this.state.emailError;
 		const notEmpty = value.trim().length >= 1;
 
 		switch(id) {
@@ -59,6 +61,7 @@ class ContactForm extends Component {
 				break;
 			case 'email':
 				emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+				emailError = emailValid ? '' : 'Please enter a valid email address.';
 				break;
 		}
 
@@ -67,6 +70,7 @@ class ContactForm extends Component {
 			lastNameValid,
 			messageValid,
 			emailValid,
+			emailError,
 		}, this.validateForm);
 	}
 
@@ -77,12 +81,6 @@ class ContactForm extends Component {
 				this.state.messageValid &&
 				this.state.emailValid
 		});
-	}
-
-	errorClass(error) {
-		return (
-			error.length === 0 ? '' : 'has-error'	
-		);
 	}
 
 	render() {
@@ -125,13 +123,18 @@ class ContactForm extends Component {
 								name="Field3"
 								type="email"
 								spellCheck="false"
-								className="form-control"
+								className={this.state.emailError.length === 0 ? 'form-control' : 'form-control is-invalid'}
 								maxLength="255"
 								tabIndex="3"
 								placeholder="Email Address"
 								value={this.state.email}
 								onChange={(event) => this.handleUserInput(event)}/>
 						</div>
+						{
+							this.state.emailError.length > 0 ?
+							<div className="text-danger">{this.state.emailError}</div> :
+							null
+						}
 					</div>
 					<div className="form-group">
 						<textarea id="message"
