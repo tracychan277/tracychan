@@ -8,20 +8,20 @@ const Home = () => (
 	<main>
 		<div className="jumbotron">
 			<h1>Front-end web development</h1>
-			<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-			<p><a className="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+			<p></p>
 		</div>
 		<div className="marketing-rows">
 			<MarketingRow heading="Responsive web design" image={ResponsiveSvg}>
-				Maecenas sed diam eget risus varius blandit sit amet non magna.
+				See your design come to life.
 			</MarketingRow>
 			<MarketingRow heading="Modern front-end technologies and frameworks" image={CodeSvg}>
-				Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+				<a href="/this-site">Click here</a> to see what technologies were used to build this site.
 			</MarketingRow>
 			<MarketingRow heading="Cross-browser testing" image={CrossBrowserSvg}>
 				Hello
 			</MarketingRow>
 		</div>
+		<p className="text-muted"><small>Vector graphics designed by <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener noreferrer">Freepik</a> at Flaticon.</small></p>
 	</main>
 );
 
