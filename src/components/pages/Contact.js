@@ -33,15 +33,15 @@ class ContactForm extends Component {
 	}
 
 	handleUserInput(e) {
-		const id = e.target.id;
+		const name = e.target.name;
 		const value = e.target.value;
 		this.setState(
-			{[id]: value},
-			() => {this.validateField(id, value)}
+			{[name]: value},
+			() => {this.validateField(name, value)}
 		);
 	}
 
-	validateField(id, value) {
+	validateField(name, value) {
 		let firstNameValid = this.state.firstNameValid;
 		let lastNameValid = this.state.lastNameValid;
 		let messageValid = this.state.messageValid;
@@ -49,7 +49,7 @@ class ContactForm extends Component {
 		let emailError = this.state.emailError;
 		const notEmpty = value.trim().length >= 1;
 
-		switch(id) {
+		switch(name) {
 			case 'firstName':
 				firstNameValid = notEmpty;
 				break;
@@ -90,13 +90,12 @@ class ContactForm extends Component {
 					encType="multipart/htmlForm-data"
 					method="post"
 					noValidate
-					action="https://tracychan277.wufoo.com/forms/z19hxi9t0im2hbm/"
+					action="https://formspree.io/hello@tracychan.me"
 				>
 					<div className="form-group">
 						<div className="row">
 							<div className="col">
-								<input id="firstName"
-									name="Field1"
+								<input name="firstName"
 									type="text"
 									className="form-control"
 									tabIndex="1"
@@ -105,8 +104,7 @@ class ContactForm extends Component {
 									onChange={(event) => this.handleUserInput(event)}/>
 							</div>
 							<div className="col">
-								<input id="lastName"
-									name="Field2"
+								<input name="lastName"
 									type="text"
 									className="form-control"
 									tabIndex="2"
@@ -119,8 +117,7 @@ class ContactForm extends Component {
 					<div className="form-group">
 						<div className="input-group">
 							<div className="input-group-addon">@</div>
-							<input id="email"
-								name="Field3"
+							<input name="email"
 								type="email"
 								spellCheck="false"
 								className={this.state.emailError.length === 0 ? 'form-control' : 'form-control is-invalid'}
@@ -137,8 +134,7 @@ class ContactForm extends Component {
 						}
 					</div>
 					<div className="form-group">
-						<textarea id="message"
-							name="Field4"
+						<textarea name="message"
 							className="form-control"
 							spellCheck="true"
 							rows="10" cols="50"
@@ -148,10 +144,6 @@ class ContactForm extends Component {
 							onChange={(event) => this.handleUserInput(event)}
 						></textarea>
 					</div>
-					<input type="hidden"
-						id="idstamp"
-						name="idstamp"
-						value="5IO6jTuUwUmQEVQEAiRRRLpBHQb5zC/0KSlqgg3NL9k=" />
 					<input className="btn btn-primary"
 						type="submit"
 						value="Submit"
