@@ -24,6 +24,7 @@ const Home = () => (
 			<hr/>
 			<MarketingRow heading="Cross-browser testing" image={CrossBrowserSvg}>
 				<p>Hello</p>
+				<p>Hello</p>
 			</MarketingRow>
 		</div>
 		<p className="text-muted"><small>Vector graphics designed by <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener noreferrer">Freepik</a> at Flaticon.</small></p>
@@ -50,7 +51,7 @@ const MarketingRow = (props) => (
 MarketingRow.propTypes = {
 	heading: PropTypes.string,
 	image: PropTypes.string,
-	children: PropTypes.object
+	children: PropTypes.array
 }
 
 export default Home;
