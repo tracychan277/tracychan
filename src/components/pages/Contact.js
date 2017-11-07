@@ -25,10 +25,12 @@ class ContactForm extends Component {
 		email: '',
 		message: '',
 		emailError: '',
-		firstNameValid: false,
-		lastNameValid: false,
-		emailValid: false,
-		messageValid: false,
+		valid: {
+			firstName: false,
+			lastName: false,
+			email: false,
+			message: false
+		},
 		formValid: false
 	}
 
@@ -42,45 +44,37 @@ class ContactForm extends Component {
 	}
 
 	validateField(name, value) {
-		let firstNameValid = this.state.firstNameValid;
-		let lastNameValid = this.state.lastNameValid;
-		let messageValid = this.state.messageValid;
-		let emailValid = this.state.emailValid;
+		let valid = this.state.valid;
 		let emailError = this.state.emailError;
-		const notEmpty = value.trim().length >= 1;
 
 		switch(name) {
 			case 'firstName':
-				firstNameValid = notEmpty;
-				break;
 			case 'lastName':
-				lastNameValid = notEmpty;
-				break;
 			case 'message':
-				messageValid = notEmpty;
+				valid[name] = value.trim().length >= 1;
 				break;
 			case 'email':
-				emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-				emailError = emailValid ? '' : 'Please enter a valid email address.';
+				valid[name] = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+				emailError = valid[name] ? '' : 'Please enter a valid email address.';
 				break;
 		}
 
 		this.setState({
-			firstNameValid,
-			lastNameValid,
-			messageValid,
-			emailValid,
-			emailError,
+			valid, emailError
 		}, this.validateForm);
 	}
 
 	validateForm() {
-		this.setState({
-			formValid: this.state.firstNameValid &&
-				this.state.lastNameValid &&
-				this.state.messageValid &&
-				this.state.emailValid
-		});
+		let formValid = this.state.formValid;
+
+		for (let field in this.state.valid) {
+			if (!field) {
+				formValid = false;
+				break;
+			}
+		}
+
+		this.setState({formValid});
 	}
 
 	render() {
