@@ -44,7 +44,7 @@ class ContactForm extends Component {
 	}
 
 	validateField(name, value) {
-		let validFields = this.state.valid;
+		let validFields = this.state.validFields;
 		let emailError = this.state.emailError;
 
 		switch(name) {
@@ -123,7 +123,7 @@ class ContactForm extends Component {
 						</div>
 						{
 							this.state.emailError.length > 0 ?
-							<div className="text-danger">{this.state.emailError}</div> :
+							<p className="text-danger">{this.state.emailError}</p> :
 							null
 						}
 					</div>
