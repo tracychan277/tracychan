@@ -1,7 +1,7 @@
 import React from 'react';
 import {FaGithub} from 'react-icons/lib/fa';
 import Card from '../Card';
-import DevIcon from '../DevIcon';
+import DevIconList from '../DevIconList';
 import DataList from '../DataList';
 
 const devtoolsList = {
@@ -33,14 +33,6 @@ const Site = () => (
 	</main>
 );
 
-const Jumbotron = () => (
-	<div className="jumbotron">
-		<h1>This Site</h1>
-		<DevIcons/>
-		<p>You can view the source code for this site at <a href="https://github.com/tracychan277/tracychan" rel="noopener noreferrer" target="_blank"><FaGithub/> GitHub</a>. This static site is hosted on an AWS S3 bucket and served through CloudFront.</p>
-	</div>
-);
-
 const iconNames = [
 	'amazonwebservices-original',
 	'webpack-original',
@@ -50,14 +42,12 @@ const iconNames = [
 	'bootstrap-plain'
 ];
 
-const DevIcons = () => (
-	<ul className="dev-icons">
-		{
-			iconNames.map((iconName) => {
-				return <li key={iconName}><DevIcon name={iconName}/></li>
-			})
-		}
-	</ul>
+const Jumbotron = () => (
+	<div className="jumbotron">
+		<h1>This Site</h1>
+		<DevIconList iconNames={iconNames}/>
+		<p>You can view the source code for this site at <a href="https://github.com/tracychan277/tracychan" rel="noopener noreferrer" target="_blank"><FaGithub/> GitHub</a>. This static site is hosted on an AWS S3 bucket and served through CloudFront.</p>
+	</div>
 );
 
 export default Site;

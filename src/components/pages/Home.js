@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ResponsiveSvg from '../../images/responsive.svg';
 import CodeSvg from '../../images/code.svg';
 import CrossBrowserSvg from '../../images/cross-browser.svg';
+import DevIconList from '../DevIconList';
 
 const Home = () => (
 	<main>
@@ -23,8 +24,9 @@ const Home = () => (
 			</MarketingRow>
 			<hr/>
 			<MarketingRow heading="Cross-browser testing" image={CrossBrowserSvg}>
-				<p>Hello</p>
-				<p>Hello</p>
+				<p>I test all websites I develop in the most popular browsers and operating systems.</p>
+				<DevIconList iconNames={['safari-original', 'chrome-original', 'firefox-original', 'ie10-original']}/>
+				<DevIconList iconNames={['android-plain', 'apple-original', 'ubuntu-plain', 'windows8-original']}/>
 			</MarketingRow>
 		</div>
 		<p className="text-muted"><small>Vector graphics designed by <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener noreferrer">Freepik</a> at Flaticon.</small></p>
