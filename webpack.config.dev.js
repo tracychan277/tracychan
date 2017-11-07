@@ -80,7 +80,8 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({
 			template: './public/index.html',
-			inject: 'body'
+			inject: 'body',
+			favicon: './favicon.ico'
 		})
 	]
 };
