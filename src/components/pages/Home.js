@@ -50,7 +50,7 @@ const MarketingRow = (props) => (
 MarketingRow.propTypes = {
 	heading: PropTypes.string,
 	image: PropTypes.string,
-	children: PropTypes.string
+	children: PropTypes.object
 }
 
 export default Home;
