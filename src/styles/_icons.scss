@@ -8,7 +8,6 @@ svg {
 // Devicon icons
 i[class^="devicon-"] {
 	display: block;
-	background-color: $body-color;
 	margin: $devicon-margin;
 	width: $devicon-size;
 	height: $devicon-size;
@@ -26,7 +25,7 @@ i[class^="devicon-"] {
 	$directory: str_slice($devicon, 0, $dash-index - 1);
 
 	.devicon-#{$devicon} {
-		mask-image: url('~devicon-2.2/icons/#{$directory}/#{$devicon}.svg');
+		background-image: url('~devicon-2.2/icons/#{$directory}/#{$devicon}.svg');
 	}
 }
 
