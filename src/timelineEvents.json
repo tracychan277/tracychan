@@ -3,8 +3,9 @@
 		"year": "2005",
 		"duration": "3 years",
 		"icons": [
-			"html5-plain",
-			"css3-plain",
+			"html5-original",
+			"css3-original",
+			"javascript-original",
 			"photoshop-plain"
 		],
 		"description": "Amateur web design and development as a hobby. Self-taught basic HTML, CSS, JavaScript, and image creation/editing in Adobe Photoshop."
@@ -18,9 +19,9 @@
 		"year": "2011",
 		"duration": "5 years",
 		"icons": [
-			"java-plain",
+			"java-original",
 			"oracle-original",
-			"vim-plain"
+			"vim-original"
 		],
 		"description": "Formal programming and web development studies at university graduating with a Bachelor of Information Technology and Systems/Bachelor of Arts double degree."
 	},
@@ -48,10 +49,11 @@
 		"duration": "1.5 years",
 		"icons": [
 			"ubuntu-plain",
-			"phpstorm-plain",
+			"phpstorm-original",
 			"git-plain",
 			"amazonwebservices-original",
-			"nginx-original", "php-plain",
+			"nginx-original",
+			"php-original",
 			"jquery-plain",
 			"sass-original"
 		],
@@ -61,8 +63,8 @@
 		"year": "2017 - present",
 		"icons": [
 			"github-original",
-			"webpack-plain",
-			"babel-plain",
+			"webpack-original",
+			"babel-original",
 			"react-original"
 		],
 		"description": "Exploring modern front-end development technologies and frameworks, in particular React, and seeking an exciting new role in front-end development."

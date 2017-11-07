@@ -43,8 +43,8 @@ const Jumbotron = () => (
 
 const iconNames = [
 	'amazonwebservices-original',
-	'webpack-plain',
-	'babel-plain',
+	'webpack-original',
+	'babel-original',
 	'react-original',
 	'sass-original',
 	'bootstrap-plain'
