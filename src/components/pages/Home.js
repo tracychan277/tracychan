@@ -12,15 +12,17 @@ const Home = () => (
 		</div>
 		<div className="marketing-rows">
 			<MarketingRow heading="Responsive web design" image={ResponsiveSvg}>
-				See your design come to life.
+				<p>See your design come to life.</p>
+				<p>I specialise in converting a design into a fully functional website that performs consistently across different devices and screen sizes.</p>
+				<p>Previous responsive redesign projects saw a 50% conversion rate on mobile for a previously unresponsive desktop-centric website according to Google Analytics tracking.</p>
 			</MarketingRow>
 			<hr/>
 			<MarketingRow heading="Modern front-end technologies and frameworks" image={CodeSvg}>
-				<a href="/this-site">Click here</a> to see what technologies were used to build this site.
+				<p><a href="/this-site">Click here</a> to see what technologies were used to build this site.</p>
 			</MarketingRow>
 			<hr/>
 			<MarketingRow heading="Cross-browser testing" image={CrossBrowserSvg}>
-				Hello
+				<p>Hello</p>
 			</MarketingRow>
 		</div>
 		<p className="text-muted"><small>Vector graphics designed by <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener noreferrer">Freepik</a> at Flaticon.</small></p>
@@ -39,7 +41,7 @@ const MarketingRow = (props) => (
 		</div>
 		<div className="column">
 			<h2>{props.heading}</h2>
-			<p>{props.children}</p>
+			{props.children}
 		</div>
 	</div>
 );
