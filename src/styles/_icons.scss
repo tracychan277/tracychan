@@ -18,6 +18,11 @@ i[class^="devicon-"] {
 		width: $timeline-icon-size;
 		height: $timeline-icon-size;
 	}
+
+	.marketing-rows & {
+		width: $marketing-icon-size;
+		height: $marketing-icon-size;
+	}
 }
 
 @each $devicon in $devicons-list {
@@ -42,6 +47,12 @@ i[class^="devicon-"] {
 
 		@include media-breakpoint-up(md) {
 			@include make-col(2);
+		}
+	}
+
+	.marketing-rows & {
+		li {
+			@include make-col(3);
 		}
 	}
 }
