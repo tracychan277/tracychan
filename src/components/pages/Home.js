@@ -18,7 +18,8 @@ const Home = () => (
 			</MarketingRow>
 			<hr/>
 			<MarketingRow heading="Modern front-end technologies and frameworks" image={CodeSvg}>
-				<p><a href="/this-site">Click here</a> to see what technologies were used to build this site.</p>
+				<p>As a perfectionist, I am constantly striving for self-improvement, and this includes keeping up-to-date with the latest technologies and coding standards. I ensure that my code is written to scale and loosely-coupled enough to be reusable.</p>
+				<p><a href="/this-site">Click here</a> to see what technologies and frameworks were used to build this site.</p>
 			</MarketingRow>
 			<hr/>
 			<MarketingRow heading="Cross-browser testing" image={CrossBrowserSvg}>
