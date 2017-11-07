@@ -130,6 +130,12 @@ footer {
 	&:first-of-type {
 		padding-top: 0;
 	}
+
+	.column {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }
 
 hr {
