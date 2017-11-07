@@ -78,7 +78,8 @@ module.exports = {
 				collapseWhitespace: true
 			},
 			template: './public/index.html',
-			inject: 'body'
+			inject: 'body',
+			favicon: './favicon.ico'
 		}),
 		new ExtractTextPlugin('styles.css'),
 		new webpack.optimize.UglifyJsPlugin({
