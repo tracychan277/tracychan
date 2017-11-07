@@ -25,7 +25,7 @@ class ContactForm extends Component {
 		email: '',
 		message: '',
 		emailError: '',
-		valid: {
+		validFields: {
 			firstName: false,
 			lastName: false,
 			email: false,
@@ -44,30 +44,30 @@ class ContactForm extends Component {
 	}
 
 	validateField(name, value) {
-		let valid = this.state.valid;
+		let validFields = this.state.valid;
 		let emailError = this.state.emailError;
 
 		switch(name) {
 			case 'firstName':
 			case 'lastName':
 			case 'message':
-				valid[name] = value.trim().length >= 1;
+				validFields[name] = value.trim().length >= 1;
 				break;
 			case 'email':
-				valid[name] = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-				emailError = valid[name] ? '' : 'Please enter a valid email address.';
+				validFields[name] = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+				emailError = validFields[name] ? '' : 'Please enter a valid email address.';
 				break;
 		}
 
 		this.setState({
-			valid, emailError
+			validFields, emailError
 		}, this.validateForm);
 	}
 
 	validateForm() {
 		let formValid = this.state.formValid;
 
-		for (let field in this.state.valid) {
+		for (let field in this.state.validFields) {
 			if (!field) {
 				formValid = false;
 				break;
