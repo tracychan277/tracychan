@@ -8,7 +8,7 @@ const Home = () => (
 	<main>
 		<div className="jumbotron">
 			<h1>Front-end web development</h1>
-			<p></p>
+			<p>I am a full-stack web developer with a love for the frontend. I am passionate about delivering the best user web experience and getting the small details right. <a href="/about-me">Click here</a> to read more about my professional development journey.</p>
 		</div>
 		<div className="marketing-rows">
 			<MarketingRow heading="Responsive web design" image={ResponsiveSvg}>
