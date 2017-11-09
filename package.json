@@ -6,7 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
     "build": "NODE_ENV=production webpack --config webpack.config.prod.js",
-    "deploy": "aws s3 sync build/ s3://aws-website-tracychan-zdlya --exclude .DS_Store --cache-control max-age=604800"
+    "deploy": "aws s3 sync build/ s3://aws-website-tracychan-zdlya --exclude .DS_Store --cache-control max-age=604800 --delete"
   },
   "repository": {
     "type": "git",
