@@ -44,7 +44,7 @@ class ContactForm extends Component {
 	}
 
 	validateField(name, value) {
-		let validFields = this.state.validFields;
+		const validFields = this.state.validFields;
 		let emailError = this.state.emailError;
 
 		switch(name) {
@@ -54,7 +54,7 @@ class ContactForm extends Component {
 				validFields[name] = value.trim().length >= 1;
 				break;
 			case 'email':
-				validFields[name] = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+				validFields[name] = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i) ? true : false;
 				emailError = validFields[name] ? '' : 'Please enter a valid email address.';
 				break;
 		}
@@ -65,14 +65,8 @@ class ContactForm extends Component {
 	}
 
 	validateForm() {
-		let formValid = this.state.formValid;
-
-		for (let field in this.state.validFields) {
-			if (!field) {
-				formValid = false;
-				break;
-			}
-		}
+		const validFields = Object.values(this.state.validFields);
+		const formValid = validFields.every((field) => {return field == true});
 
 		this.setState({formValid});
 	}
