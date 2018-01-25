@@ -110,7 +110,9 @@ class ContactForm extends Component {
 					</div>
 					<div className="form-group">
 						<div className="input-group">
-							<div className="input-group-addon">@</div>
+							<div className="input-group-prepend">
+								<span className="input-group-text">@</span>
+							</div>
 							<input name="email"
 								type="email"
 								spellCheck="false"
