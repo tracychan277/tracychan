@@ -81,5 +81,10 @@
       "eslint:recommended",
       "plugin:react/recommended"
     ]
+  },
+  "jest": {
+	"moduleNameMapper": {
+	  "\\.(svg)$": "<rootDir>/tests/mocks/imageMock.js"
+	}
   }
 }
