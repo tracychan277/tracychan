@@ -36,11 +36,7 @@ module.exports = {
 			{
 				test: /\.js$/,
 				include: __dirname + '/src',
-				loader: 'babel-loader',
-				options: {
-					presets: ['react', 'env'],
-					plugins: ['transform-class-properties', 'syntax-object-rest-spread']
-				}
+				loader: 'babel-loader'
 			},
 			{
 				test: /\.scss$/,
