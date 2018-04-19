@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link, NavLink} from 'react-router-dom';
-import glasses from '../../glasses.png';
+import glasses from '../images/glasses.png';
 
 const Nav = () => (
 	<nav>
