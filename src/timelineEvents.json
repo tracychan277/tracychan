@@ -27,20 +27,24 @@
 	},
 	{
 		"year": "2015",
-		"duration": "8 months",
+		"duration": "6 months",
 		"icons": [
-			"oracle-original"
+			"oracle-original",
+			"java-original"
 		],
 		"description": "Internship working in the government doing data fixes in Oracle SQL and proprietary SAS programming language."
 	},
 	{
 		"year": "2015 - 2016",
-		"duration": "6 months",
+		"duration": "8 months",
 		"icons": [
 			"sourcetree-original",
 			"apache-plain",
 			"mysql-plain",
-			"bootstrap-plain"
+			"php-original",
+			"bootstrap-plain",
+			"html5-original",
+			"css3-original"
 		],
 		"description": "Small business client website project built in CakePHP and Bootstrap involving all phases of the SDLC from conception to delivery."
 	},
@@ -54,19 +58,24 @@
 			"amazonwebservices-original",
 			"nginx-original",
 			"php-original",
+			"html5-original",
+			"bootstrap-plain",
 			"jquery-plain",
 			"sass-original"
 		],
 		"description": "Professional full-stack web-development experience working at an eCommerce web development agency specialising in Magento."
 	},
 	{
-		"year": "2017 - present",
+		"year": "2018 - present",
 		"icons": [
+			"apple-original",
+			"phpstorm-original",
 			"github-original",
-			"webpack-original",
-			"babel-original",
-			"react-original"
+			"html5-original",
+			"javascript-original",
+			"sass-original",
+			"slack-plain"
 		],
-		"description": "Exploring modern front-end development technologies and frameworks, in particular React, and seeking an exciting new role in front-end development."
+		"description": "Relocation interstate and transition from full-stack to frontend web development at an eCommerce agency specialising in both Magento and Shopify."
 	}
 ]
