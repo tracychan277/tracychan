@@ -4,7 +4,7 @@ import {FaLinkedinSquare, FaEnvelope} from 'react-icons/lib/fa';
 const Contact = () => (
 	<main>
 		<h1>Contact</h1>
-		<p>I am currently based in Melbourne, Australia but am interested in international relocation.</p>
+		<p>I am currently based in Sydney, Australia but am interested in international relocation opportunities in the future.</p>
 		<p>For work-related enquiries, please contact me through LinkedIn, or send me an email. Alternatively, the form below will also send a message to my email address.</p>
 		<ul className="contact-list">
 			<li>
