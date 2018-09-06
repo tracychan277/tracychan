@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FaLinkedinSquare, FaEnvelope} from 'react-icons/lib/fa';
+import {FaLinkedinSquare} from 'react-icons/lib/fa';
 
 const Contact = () => (
 	<main>
