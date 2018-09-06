@@ -5,13 +5,10 @@ const Contact = () => (
 	<main>
 		<h1>Contact</h1>
 		<p>I am based in Melbourne, Australia.</p>
-		<p>For work-related enquiries, please contact me through LinkedIn, or send me an email. Alternatively, the form below will also send a message to my email address.</p>
+		<p>For work-related enquiries, please contact me through LinkedIn, or send a message using the form below.</p>
 		<ul className="contact-list">
 			<li>
 				<a href="https://www.linkedin.com/in/tracy-chan-8584b6b4/" rel="noopener noreferrer" target="_blank"><FaLinkedinSquare/> tracy-chan-8584b6b4</a>
-			</li>
-			<li>
-				<a href="mailto:hello@tracychan.me"><FaEnvelope/> hello@tracychan.me</a>
 			</li>
 		</ul>
 		<ContactForm/>
@@ -78,7 +75,7 @@ class ContactForm extends Component {
 					encType="multipart/htmlForm-data"
 					method="post"
 					noValidate
-					action="https://formspree.io/hello@tracychan.me"
+					action="https://formspree.io/ss.static@gmail.com"
 				>
 					<div className="form-group">
 						<div className="row">
