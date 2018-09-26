@@ -6,7 +6,7 @@ const DevIcon = (props) => (
 );
 
 DevIcon.propTypes = {
-	name: PropTypes.string
+	name: PropTypes.string.isRequired
 }
 
 export default DevIcon;

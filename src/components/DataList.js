@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DataList = (props) => (
+const DataList = ({list}) => (
 	<dl>
 		{
-			Object.keys(props.list).map((title) => {
+			Object.keys(list).map((title) => {
 				return (
 					<span key={title}>
 						<dt>{title}</dt>
-						<dd>{props.list[title]}</dd>
+						<dd>{list[title]}</dd>
 					</span>
 				)
 			})
@@ -17,7 +17,7 @@ const DataList = (props) => (
 );
 
 DataList.propTypes = {
-	list: PropTypes.object
+	list: PropTypes.objectOf(PropTypes.string)
 }
 
 export default DataList;

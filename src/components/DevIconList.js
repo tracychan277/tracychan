@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DevIcon from './DevIcon';
 
-const DevIconList = (props) => (
+const DevIconList = ({iconNames}) => (
 	<ul className="dev-icons">
 		{
-			props.iconNames.map((iconName) => {
+			iconNames.map((iconName) => {
 				return <li key={iconName}><DevIcon name={iconName}/></li>
 			})
 		}
@@ -13,7 +13,7 @@ const DevIconList = (props) => (
 );
 
 DevIconList.propTypes = {
-	iconNames: PropTypes.array
+	iconNames: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
 export default DevIconList;
