@@ -9,12 +9,7 @@ const About = () => (
 	<main>
 		<div className="jumbotron">
 			<h1>About Me</h1>
-			<p>I was interested in web design and development as a teenager, pretty much as soon as I
-			had access to the internet, and managed to turn my hobby into a profession. For more
-			information about my education and work experience, see my
-			<a href="https://www.linkedin.com/in/tracy-chan-8584b6b4/" rel="noopener noreferrer" target="_blank">
-				<FaLinkedinSquare/> LinkedIn
-			</a> profile.</p>
+			<p>I was interested in web design and development as a teenager, pretty much as soon as I had access to the internet, and managed to turn my hobby into a profession. For more information about my education and work experience, see my <a href="https://www.linkedin.com/in/tracy-chan-8584b6b4/" rel="noopener noreferrer" target="_blank"><FaLinkedinSquare/> LinkedIn</a> profile.</p>
 		</div>
 		<Timeline events={timelineEvents}/>
 	</main>
