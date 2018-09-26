@@ -64,5 +64,19 @@
 			"sass-original"
 		],
 		"description": "Professional full-stack web-development experience working at an eCommerce web development agency specialising in Magento."
+	},
+	{
+		"year": "2018 - present",
+		"icons": [
+			"apple-original",
+			"github-original",
+			"babel-original",
+			"react-original",
+			"javascript-original",
+			"css3-original",
+			"slack-plain",
+			"trello-plain"
+		],
+		"description": "Transition from fullstack to a frontend-focused position. React/Redux SPA development at an early-stage high social impact startup."
 	}
 ]

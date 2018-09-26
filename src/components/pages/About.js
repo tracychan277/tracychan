@@ -9,23 +9,28 @@ const About = () => (
 	<main>
 		<div className="jumbotron">
 			<h1>About Me</h1>
-			<p>I was interested in web design and development as a teenager, pretty much as soon as I had access to the internet, and managed to turn my hobby into a profession. For more information about my education and work experience, see my <a href="https://www.linkedin.com/in/tracy-chan-8584b6b4/" rel="noopener noreferrer" target="_blank"><FaLinkedinSquare/> LinkedIn</a> profile.</p>
+			<p>I was interested in web design and development as a teenager, pretty much as soon as I
+			had access to the internet, and managed to turn my hobby into a profession. For more
+			information about my education and work experience, see my
+			<a href="https://www.linkedin.com/in/tracy-chan-8584b6b4/" rel="noopener noreferrer" target="_blank">
+				<FaLinkedinSquare/> LinkedIn
+			</a> profile.</p>
 		</div>
 		<Timeline events={timelineEvents}/>
 	</main>
 );
 
-const Timeline = (props) => (
+const Timeline = ({events}) => (
 	<ul className="timeline">
 		{
-			props.events.map((event) => {
+			events.map(({year, duration, icons, description}) => {
 				return (
-					<Event key={event.year}
-						year={event.year}
-						duration={event.duration}
-						icons={event.icons}
+					<Event key={year}
+						year={year}
+						duration={duration}
+						icons={icons}
 					>
-						{event.description}
+						{description}
 					</Event>
 				)
 			})
@@ -34,19 +39,26 @@ const Timeline = (props) => (
 );
 
 Timeline.propTypes = {
-	events: PropTypes.array
+	events: PropTypes.arrayOf(
+		PropTypes.exact({
+			year: PropTypes.string.isRequired,
+			duration: PropTypes.string,
+			icons: PropTypes.arrayOf(PropTypes.string),
+			description: PropTypes.string.isRequired,
+		}).isRequired
+	).isRequired
 }
 
-const Event = (props) => (
+const Event = ({year, duration, children, icons}) => (
 	<li>
-		<Card heading={props.year}>
+		<Card heading={year}>
 			<div className="event">
-				{props.duration ? <p className="duration">{props.duration}</p> : null}
-				<p className="description">{props.children}</p>
+				{duration ? <p className="duration">{duration}</p> : null}
+				<p className="description">{children}</p>
 				<p className="icons">
 					{
-						props.icons ?
-						props.icons.map((name) => {
+						icons ?
+						icons.map((name) => {
 							return <DevIcon key={name} name={name}/>
 						}) : null
 					}
@@ -57,10 +69,10 @@ const Event = (props) => (
 );
 
 Event.propTypes = {
-	year: PropTypes.string,
+	year: PropTypes.string.isRequired,
 	duration: PropTypes.string,
-	icons: PropTypes.array,
-	children: PropTypes.string
+	icons: PropTypes.arrayOf(PropTypes.string),
+	children: PropTypes.string.isRequired
 }
 
 export default About;
