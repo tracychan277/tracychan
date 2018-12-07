@@ -66,7 +66,8 @@
 		"description": "Professional full-stack web-development experience working at an eCommerce web development agency specialising in Magento."
 	},
 	{
-		"year": "2018 - present",
+		"year": "2018",
+		"duration": "2 months",
 		"icons": [
 			"apple-original",
 			"github-original",
