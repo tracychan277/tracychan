@@ -77,7 +77,7 @@ module.exports = {
 			inject: 'body',
 			favicon: './favicon.ico'
 		}),
-		new ExtractTextPlugin('styles.css'),
+		new ExtractTextPlugin('[contenthash].css'),
 		new webpack.optimize.UglifyJsPlugin({
 			minimize: true,
 			sourceMap: true
