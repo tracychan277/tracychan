@@ -79,5 +79,14 @@
 			"trello-plain"
 		],
 		"description": "Transition from fullstack to a frontend-focused position. React/Redux SPA development at an early-stage high social impact startup."
+	},
+	{
+		"year": "2019 - present",
+		"icons": [
+			"linux-plain",
+			"github-original",
+			"python-plain"
+		],
+		"description": "Studying a Master of Information Technology degree full-time."
 	}
 ]
