@@ -1,17 +1,16 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackTemplate = require('html-webpack-template');
 
 module.exports = {
 	entry: './src/index.js',
 	devtool: 'source-map',
 	output: {
-		filename: 'bundle.min.js',
-		path: __dirname + '/public/'
+		filename: 'bundle.min.js'
 	},
 	devServer: {
 		clientLogLevel: 'none',
 		inline: true,
-		contentBase: './public/',
 		watchContentBase: true,
 		port: 3000,
 		historyApiFallback: true,
@@ -75,14 +74,15 @@ module.exports = {
 		new webpack.NamedModulesPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({
-			template: './public/index.html',
 			inject: 'body',
+			template: HtmlWebpackTemplate,
 			favicon: './favicon.ico',
 			title: 'Tracy Chan | Personal Website',
 			meta: {
 				'Content-type': {'http-equiv': 'Content-type', 'content': 'text/html; charset=utf-8'},
 				viewport: 'width=device-width, initial-scale=1'
-			}
+			},
+			appMountId: 'root'
 		})
 	]
 };

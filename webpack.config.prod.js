@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackTemplate = require('html-webpack-template');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -73,14 +74,15 @@ module.exports = {
 			minify: {
 				collapseWhitespace: true
 			},
-			template: './public/index.html',
 			inject: 'body',
+			template: HtmlWebpackTemplate,
 			favicon: './favicon.ico',
 			title: 'Tracy Chan | Personal Website',
 			meta: {
 				'Content-type': {'http-equiv': 'Content-type', 'content': 'text/html; charset=utf-8'},
 				viewport: 'width=device-width, initial-scale=1'
-			}
+			},
+			appMountId: 'root'
 		}),
 		new ExtractTextPlugin('[contenthash].css'),
 		new webpack.optimize.UglifyJsPlugin({
