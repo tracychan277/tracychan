@@ -78,11 +78,15 @@ module.exports = {
 			template: HtmlWebpackTemplate,
 			favicon: './favicon.ico',
 			title: 'Tracy Chan | Personal Website',
-			meta: {
-				'Content-type': {'http-equiv': 'Content-type', 'content': 'text/html; charset=utf-8'},
-				viewport: 'width=device-width, initial-scale=1'
-			},
-			appMountId: 'root'
+			mobile: true,
+			appMountId: 'root',
+			links: ['https://fonts.googleapis.com/css?family=Satisfy'],
+			meta: [
+				{
+					'http-equiv': 'Content-type',
+					content: 'text/html; charset=utf-8'
+				}
+			]
 		})
 	]
 };
