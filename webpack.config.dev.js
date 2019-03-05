@@ -22,7 +22,7 @@ module.exports = {
 		}
 	},
 	module: {
-		 loaders: [
+		loaders: [
 			{
 				enforce: 'pre',
 				test: /\.js$/,

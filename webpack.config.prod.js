@@ -6,11 +6,11 @@ module.exports = {
 	entry: './src/index.js',
 	devtool: 'source-map',
 	output: {
-		filename: 'bundle.min.js',
+		filename: '[hash].min.js',
 		path: __dirname + '/build'
 	},
 	module: {
-		 loaders: [
+		loaders: [
 			{
 				enforce: 'pre',
 				test: /\.js$/,
@@ -57,7 +57,7 @@ module.exports = {
 				options: {
 					limit: 100000
 				}
- 			}
+			}
 		]
 	},
 	plugins:
