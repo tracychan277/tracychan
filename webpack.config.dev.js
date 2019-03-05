@@ -74,7 +74,7 @@ module.exports = {
 		new webpack.NamedModulesPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({
-			inject: 'body',
+			inject: false,
 			template: HtmlWebpackTemplate,
 			favicon: './favicon.ico',
 			title: 'Tracy Chan | Personal Website',

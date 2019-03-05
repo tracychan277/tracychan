@@ -74,7 +74,7 @@ module.exports = {
 			minify: {
 				collapseWhitespace: true
 			},
-			inject: 'body',
+			inject: false,
 			template: HtmlWebpackTemplate,
 			favicon: './favicon.ico',
 			title: 'Tracy Chan | Personal Website',
