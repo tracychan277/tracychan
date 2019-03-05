@@ -75,7 +75,12 @@ module.exports = {
 			},
 			template: './public/index.html',
 			inject: 'body',
-			favicon: './favicon.ico'
+			favicon: './favicon.ico',
+			title: 'Tracy Chan | Personal Website',
+			meta: {
+				'Content-type': {'http-equiv': 'Content-type', 'content': 'text/html; charset=utf-8'},
+				viewport: 'width=device-width, initial-scale=1'
+			}
 		}),
 		new ExtractTextPlugin('[contenthash].css'),
 		new webpack.optimize.UglifyJsPlugin({
