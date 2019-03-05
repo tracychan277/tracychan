@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackTemplate = require('html-webpack-template');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
 	entry: './src/index.js',
@@ -92,6 +93,7 @@ module.exports = {
 		new webpack.optimize.UglifyJsPlugin({
 			minimize: true,
 			sourceMap: true
-		})
+		}),
+		new CleanWebpackPlugin()
 	]
 };
