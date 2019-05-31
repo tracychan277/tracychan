@@ -73,6 +73,7 @@
 			"github-original",
 			"babel-original",
 			"react-original",
+			"atom-original",
 			"javascript-original",
 			"css3-original",
 			"slack-plain",
@@ -84,8 +85,14 @@
 		"year": "2019 - present",
 		"icons": [
 			"linux-plain",
+			"trello-plain",
 			"github-original",
-			"python-plain"
+			"amazonwebservices-original",
+			"atom-original",
+			"mysql-plain",
+			"java-original",
+			"python-plain",
+			"bootstrap-plain"
 		],
 		"description": "Studying a Master of Information Technology degree full-time."
 	}
