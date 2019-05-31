@@ -82,15 +82,21 @@ $timeline-marker-mobile-offset: 11px;
 $timeline-arrow-offset: -10px;
 $arrow-border-size: 10px;
 
+$timeline-box-shadow-hover: 0 0 5px $blue;
+
 $left-arrow-color: transparent transparent $white $white;
 $left-arrow-border-color: transparent transparent $grey-light $grey-light;
 $left-arrow-border-box-shadow: -5px 0 5px -5px $grey-light;
+$left-arrow-border-box-shadow-hover: -5px 0 5px -5px $blue;
 $left-arrow-box-shadow: 1px 5px 5px -5px $grey-light;
+$left-arrow-box-shadow-hover: 1px 5px 5px -5px $blue;
 
 $right-arrow-color: $white $white transparent transparent;
 $right-arrow-border-color: $grey-light $grey-light transparent transparent;
 $right-arrow-border-box-shadow: 0 -5px 5px -5px $grey-light;
+$right-arrow-border-box-shadow-hover: 0 -5px 5px -5px $blue;
 $right-arrow-box-shadow: 5px 1px 5px -5px $grey-light;
+$right-arrow-box-shadow-hover: 5px 1px 5px -5px $blue;
 
 $marker-size: 25px;
 $marker-border-width: 4px;

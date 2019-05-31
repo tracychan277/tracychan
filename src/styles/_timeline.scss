@@ -67,7 +67,7 @@
 	}
 
 	// Alternating timeline event columns on desktop
-	> :nth-child(even) {	
+	> :nth-child(even) {
 		.column {
 			@include media-breakpoint-up(md) {
 				float: right;
@@ -87,6 +87,10 @@
 	.card {
 		position: relative;
 
+		&:hover {
+			box-shadow: $timeline-box-shadow-hover;
+		}
+
 		// Faux border for arrows pointing left
 		&:before {
 			content: '';
@@ -98,6 +102,10 @@
 			transform: rotate(45deg);
 			box-shadow: $left-arrow-border-box-shadow;
 			z-index: 1;
+		}
+
+		&:hover:before {
+			box-shadow: $left-arrow-border-box-shadow-hover;
 		}
 
 		// Arrows pointing left
@@ -113,6 +121,10 @@
 			z-index: 1;
 		}
 
+		&:hover:after {
+			box-shadow: $left-arrow-box-shadow-hover;
+		}
+
 		// Arrows pointing right on desktop
 		@include media-breakpoint-up(md) {
 			// Faux border for arrows pointing right
@@ -123,12 +135,20 @@
 				box-shadow: $right-arrow-border-box-shadow;
 			}
 
+			&:hover:before {
+				box-shadow: $right-arrow-border-box-shadow-hover;
+			}
+
 			// Arrows pointing right
 			&:after {
 				left: auto;
 				right: $timeline-arrow-offset;
 				border-color: $right-arrow-color;
 				box-shadow: $right-arrow-box-shadow;
+			}
+
+			&:hover:after {
+				box-shadow: $right-arrow-box-shadow-hover;
 			}
 		}
 	}
@@ -146,12 +166,20 @@
 					box-shadow: $left-arrow-border-box-shadow;
 				}
 
+				&:hover:before {
+					box-shadow: $left-arrow-border-box-shadow-hover;
+				}
+
 				// Arrows pointing left
 				&:after {
 					left: $timeline-arrow-offset;
 					right: auto;
 					border-color: $left-arrow-color;
 					box-shadow: $left-arrow-box-shadow;
+				}
+
+				&:hover:after {
+					box-shadow: $left-arrow-box-shadow-hover;
 				}
 			}
 		}
