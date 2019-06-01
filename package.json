@@ -31,14 +31,15 @@
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^7.1.5",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.0.1",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^2.0.0",
     "css-loader": "^2.1.1",
     "enzyme": "^3.9.0",
@@ -87,7 +88,9 @@
     ]
   },
   "jest": {
-    "setupFilesAfterEnv": ["./tests/setupTests.js"],
+    "setupFilesAfterEnv": [
+      "./tests/setupTests.js"
+    ],
     "moduleNameMapper": {
       "\\.(svg)$": "<rootDir>/tests/mocks/imageMock.js"
     },
