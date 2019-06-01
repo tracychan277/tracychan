@@ -87,7 +87,7 @@
     ]
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "./tests/setupTests.js",
+    "setupFilesAfterEnv": ["./tests/setupTests.js"],
     "moduleNameMapper": {
       "\\.(svg)$": "<rootDir>/tests/mocks/imageMock.js"
     },
