@@ -8,12 +8,12 @@
 			"javascript-original",
 			"photoshop-plain"
 		],
-		"description": "Amateur web design and development as a hobby. Self-taught basic HTML, CSS, JavaScript, and image creation/editing in Adobe Photoshop."
+		"description": "<p>Amateur web design and development as a hobby. Self-taught basic HTML, CSS, JavaScript, and image creation/editing in Adobe Photoshop.</p>"
 	},
 	{
 		"year": "2008",
 		"duration": "2.5 years",
-		"description": "Part-time/casual retail work experience at a small confectionery store and large supermarket."
+		"description": "<p>Part-time/casual retail work experience at a small confectionery store and large supermarket.</p>"
 	},
 	{
 		"year": "2011",
@@ -23,7 +23,7 @@
 			"oracle-original",
 			"vim-original"
 		],
-		"description": "Formal programming and web development studies at university graduating with a Bachelor of Information Technology and Systems/Bachelor of Arts double degree."
+		"description": "<p>Formal programming and web development studies at university graduating with a Bachelor of Information Technology and Systems/Bachelor of Arts double degree.</p>"
 	},
 	{
 		"year": "2015",
@@ -32,7 +32,7 @@
 			"oracle-original",
 			"java-original"
 		],
-		"description": "Internship working in the government doing data fixes in Oracle SQL and proprietary SAS programming language."
+		"description": "<p>Internship working in the government doing data fixes in Oracle SQL and proprietary SAS programming language.</p>"
 	},
 	{
 		"year": "2015 - 2016",
@@ -46,7 +46,7 @@
 			"html5-original",
 			"css3-original"
 		],
-		"description": "Small business client website project built in CakePHP and Bootstrap involving all phases of the SDLC from conception to delivery."
+		"description": "<p>Small business client website project built in CakePHP and Bootstrap involving all phases of the SDLC from conception to delivery.</p>"
 	},
 	{
 		"year": "2016",
@@ -63,7 +63,7 @@
 			"jquery-plain",
 			"sass-original"
 		],
-		"description": "Professional full-stack web-development experience working at an eCommerce web development agency specialising in Magento."
+		"description": "<p>Professional full-stack web-development experience working at an eCommerce web development agency specialising in Magento.</p>"
 	},
 	{
 		"year": "2018",
@@ -79,7 +79,7 @@
 			"slack-plain",
 			"trello-plain"
 		],
-		"description": "Transition from fullstack to a frontend-focused position. React/Redux SPA development at an early-stage high social impact startup."
+		"description": "<p>Transition from fullstack to a frontend-focused position. React/Redux SPA development at an early-stage high social impact startup.</p>"
 	},
 	{
 		"year": "2019 - present",
@@ -95,6 +95,6 @@
 			"python-plain",
 			"bootstrap-plain"
 		],
-		"description": "Studying a Master of Information Technology degree full-time. Subjects studied: Usability Engineering, Algorithms and Analysis, Programming Internet of Things, and IT Infrastructure and Security."
+		"description": "<p>Studying a Master of Information Technology degree full-time.</p><p><b>Semester 1:</b><ul class='list'><li>Usability Engineering</li><li>Algorithms and Analysis</li><li>Programming Internet of Things</li><li>IT Infrastructure and Security</li></ul></p><p><b>Semester 2:</b><ul class='list'><li>Big Data Processing</li><li>Cloud Computing</li><li>Software Testing</li><li>Software Engineering Project Management</li></p>"
 	}
 ]

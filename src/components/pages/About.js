@@ -50,7 +50,7 @@ const Event = ({year, duration, children, icons}) => (
 		<Card heading={year}>
 			<div className="event">
 				{duration ? <p className="duration">{duration}</p> : null}
-				<p className="description">{parse(children)}</p>
+				<div className="description">{parse(children)}</div>
 				<p className="icons">
 					{
 						icons ?
