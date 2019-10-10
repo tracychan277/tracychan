@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import DevIcon from '../DevIcon';
 import Card from '../Card';
 import {FaLinkedinSquare} from 'react-icons/lib/fa';
+import parse from 'html-react-parser';
 import timelineEvents from '../../timelineEvents.json';
 
 const About = () => (
@@ -49,7 +50,7 @@ const Event = ({year, duration, children, icons}) => (
 		<Card heading={year}>
 			<div className="event">
 				{duration ? <p className="duration">{duration}</p> : null}
-				<p className="description">{children}</p>
+				<p className="description">{parse(children)}</p>
 				<p className="icons">
 					{
 						icons ?
