@@ -19,9 +19,9 @@ const About = () => (
 const Timeline = ({events}) => (
 	<ul className="timeline">
 		{
-			events.map(({year, duration, icons, description}) => {
+			events.map(({id, year, duration, icons, description}) => {
 				return (
-					<Event key={year}
+					<Event key={id}
 						year={year}
 						duration={duration}
 						icons={icons}
@@ -37,6 +37,7 @@ const Timeline = ({events}) => (
 Timeline.propTypes = {
 	events: PropTypes.arrayOf(
 		PropTypes.exact({
+			id: PropTypes.number.isRequired,
 			year: PropTypes.string.isRequired,
 			duration: PropTypes.string,
 			icons: PropTypes.arrayOf(PropTypes.string),

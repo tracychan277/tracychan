@@ -1,5 +1,6 @@
 [
 	{
+		"id": 1,
 		"year": "2005",
 		"duration": "3 years",
 		"icons": [
@@ -11,11 +12,13 @@
 		"description": "<p>Amateur web design and development as a hobby. Self-taught basic HTML, CSS, JavaScript, and image creation/editing in Adobe Photoshop.</p>"
 	},
 	{
+		"id": 2,
 		"year": "2008",
 		"duration": "2.5 years",
 		"description": "<p>Part-time/casual retail work experience at a small confectionery store and large supermarket.</p>"
 	},
 	{
+		"id": 3,
 		"year": "2011",
 		"duration": "5 years",
 		"icons": [
@@ -26,6 +29,7 @@
 		"description": "<p>Formal programming and web development studies at university graduating with a Bachelor of Information Technology and Systems/Bachelor of Arts double degree.</p>"
 	},
 	{
+		"id": 4,
 		"year": "2015",
 		"duration": "6 months",
 		"icons": [
@@ -35,6 +39,7 @@
 		"description": "<p>Internship working in the government doing data fixes in Oracle SQL and proprietary SAS programming language.</p>"
 	},
 	{
+		"id": 5,
 		"year": "2015 - 2016",
 		"duration": "8 months",
 		"icons": [
@@ -49,6 +54,7 @@
 		"description": "<p>Small business client website project built in CakePHP and Bootstrap involving all phases of the SDLC from conception to delivery.</p>"
 	},
 	{
+		"id": 6,
 		"year": "2016",
 		"duration": "1.5 years",
 		"icons": [
@@ -66,22 +72,24 @@
 		"description": "<p>Professional full-stack web-development experience working at an eCommerce web development agency specialising in Magento.</p>"
 	},
 	{
+		"id": 7,
 		"year": "2018",
 		"duration": "2 months",
 		"icons": [
 			"apple-original",
+			"slack-plain",
+			"trello-plain",
+			"atom-original",
 			"github-original",
 			"babel-original",
 			"react-original",
-			"atom-original",
 			"javascript-original",
-			"css3-original",
-			"slack-plain",
-			"trello-plain"
+			"css3-original"
 		],
 		"description": "<p>Transition from fullstack to a frontend-focused position. React/Redux SPA development at an early-stage high social impact startup.</p>"
 	},
 	{
+		"id": 8,
 		"year": "2019 - present",
 		"icons": [
 			"linux-plain",
@@ -96,5 +104,25 @@
 			"bootstrap-plain"
 		],
 		"description": "<p>Studying a Master of Information Technology degree full-time.</p><p><b>Semester 1:</b><ul class='list'><li>Usability Engineering</li><li>Algorithms and Analysis</li><li>Programming Internet of Things</li><li>IT Infrastructure and Security</li></ul></p><p><b>Semester 2:</b><ul class='list'><li>Big Data Processing</li><li>Cloud Computing</li><li>Software Testing</li><li>Software Engineering Project Management</li></p>"
+	},
+	{
+		"id": 9,
+		"year": "2019 - present",
+		"icons": [
+			"slack-plain",
+			"trello-plain",
+			"pycharm-plain",
+			"docker-plain",
+			"gulp-plain",
+			"github-original",
+			"django-plain",
+			"python-plain",
+			"bootstrap-plain",
+			"html5-original",
+			"css3-original",
+			"javascript-original",
+			"jquery-plain"
+		],
+		"description": "<p>Founding intern and later part-time frontend developer for an early-stage Silicon Valley-based tech startup while finishing off Master's degree.</p>"
 	}
 ]
