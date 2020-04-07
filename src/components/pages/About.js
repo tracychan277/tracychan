@@ -19,7 +19,7 @@ const About = () => (
 const Timeline = ({events}) => (
 	<ul className="timeline">
 		{
-			events.map(({id, year, duration, icons, description}) => {
+			events.reverse().map(({id, year, duration, icons, description}) => {
 				return (
 					<Event key={id}
 						year={year}
