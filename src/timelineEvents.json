@@ -90,9 +90,11 @@
 	},
 	{
 		"id": 8,
-		"year": "2019 - present",
+		"year": "2019 - 2020",
+		"duration": "1.5 years",
 		"icons": [
 			"linux-plain",
+			"slack-plain",
 			"trello-plain",
 			"github-original",
 			"amazonwebservices-original",
@@ -103,7 +105,7 @@
 			"python-plain",
 			"bootstrap-plain"
 		],
-		"description": "<p>Studying a Master of Information Technology degree full-time.</p><p><b>Semester 1:</b><ul class='list'><li>Usability Engineering</li><li>Algorithms and Analysis</li><li>Programming Internet of Things</li><li>IT Infrastructure and Security</li></ul></p><p><b>Semester 2:</b><ul class='list'><li>Big Data Processing</li><li>Cloud Computing</li><li>Software Testing</li><li>Software Engineering Project Management</li></p>"
+		"description": "<p>Studied a Master of Information Technology degree full-time.</p><p><b>Semester 1:</b><ul class='list'><li>Usability Engineering</li><li>Algorithms and Analysis</li><li>Programming Internet of Things</li><li>IT Infrastructure and Security</li></ul></p><p><b>Semester 2:</b><ul class='list'><li>Big Data Processing</li><li>Cloud Computing</li><li>Software Testing</li><li>Software Engineering Project Management</li></ul></p><p><b>Semester 3:</b><ul class='list'><li>Advanced Professional Development</li><li>Practical Data Science with Python</li><li>Postgraduate Information Technology Project</li></ul></p>"
 	},
 	{
 		"id": 9,
@@ -123,6 +125,6 @@
 			"javascript-original",
 			"jquery-plain"
 		],
-		"description": "<p>Founding intern and later part-time frontend developer for an early-stage Silicon Valley-based tech startup while finishing off Master's degree.</p>"
+		"description": "<p>Founding intern and later part-time frontend developer for an early-stage Silicon Valley-based tech startup while finishing off Master's degree. Currently full-time founding engineer specialising in frontend development.</p>"
 	}
 ]
